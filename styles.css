@@ -190,7 +190,7 @@ nav ul li a {
   width: 100vw;
   max-width: 100%;
 /*  width: 390px;*/
-  height: 100vh;
+  height: 80%;
   overflow: hidden; /* Hide any overflow content */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /* Center the image horizontally */
@@ -204,7 +204,7 @@ nav ul li a {
 }
 .two {
   width: 100%;
-  height: 15%;
+  height: 20%;
 /*  margin-top: 5%;*/
 /*  display: flex;
   flex-direction: column;*/
@@ -243,7 +243,7 @@ nav ul li a {
   width: 100vw;
   max-width: 100%;
 /*  width: 390px;*/
-  height: 100vh;
+  height: 80%;
   overflow: hidden; /* Hide any overflow content */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /*
