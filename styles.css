@@ -1,0 +1,667 @@
+/*@media (max-width: 480px) {
+
+}*/
+
+@font-face {
+  font-family: 'GT-America';
+  src: url('/Fonts/GT-America-Standard-Regular.otf') format('otf')
+
+  font-family: 'GT-America-Bold';
+  src: url('/Fonts/GT-America-Extended-Bold.otf') format('otf');
+
+     }
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  width: 100%;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header, section, footer,
+aside, nav, article, figure {
+  display: block;
+}
+
+
+header {
+  margin-top: 5%;
+  width: 100%;
+  height: 480px;
+  margin: 0 0 40px 0;
+  padding: 0;
+  position: absolute;
+}
+
+
+/*a, a:visited {
+  color: #a4a6a8;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
+  -ms-transition: color 0.2s ease;
+  -o-transition: color 0.2s ease;
+  transition: color 0.2s ease;
+}
+*/
+/*a:hover, a:active {
+  color: #d1d3d4;
+  text-decoration: none;
+}*/
+
+/*a:focus {
+  outline: none;
+}
+*/
+/*a.info, a.info:visited, a.info:hover, a.info:active, a.purchase, a.purchase:visited, a.purchase:hover, a.purchase:active {
+  color: #ffffff;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
+  background-color: #ffffff;
+}
+*/
+/*h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5em;
+  color: #ffffff;
+}*/
+
+h1 {
+  font-family: GT America Bold;
+
+}
+.heading1 {
+  color: #FFFFFF;
+  line-height: 1.5em;
+  font-size: 24px;
+  font font-family: GT America;
+  color: #000000;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: -0.25px;
+  align-content: center;
+  padding: 5%;
+}
+
+/*h2 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+}*/
+
+p {
+  width: 480px;
+  margin: 2em auto;
+  font-family: Helvetica Neue;
+}
+
+p1, p2 {
+  font-size: 16px;
+  font-family: GT America;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: justify;
+  padding: 0 8% 5% 8%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  padding: 4%;
+  font-family: Helvetica Neue;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+
+}
+
+.nav1 {
+  padding: 4%;
+}
+/* Banner Backgrounds
+/*---------------------------------------------*/
+
+/*.banner {
+  position: absolute;
+  width: 100%;
+  height: 480px;
+}*/
+
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+.pages {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+
+}
+.one {
+  width: 100vw;
+  max-width: 100%;
+/*  width: 390px;*/
+  height: 80%;
+  overflow: hidden; /* Hide any overflow content */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /* Center the image horizontally */
+/*  width: 100%;
+  height: 85%;
+  margin-top: 0;
+  overflow: hidden;*/
+/*  display: flex;
+  flex-direction: column;
+}*/
+}
+.two {
+  width: 100%;
+  height: 20%;
+/*  margin-top: 5%;*/
+/*  display: flex;
+  flex-direction: column;*/
+}
+.m-logo {
+  position: absolute;
+  left: 5%;
+  top: 4%;
+
+}
+.logo {
+  position: absolute;
+  left: 40%;
+  top: 5%;
+}
+
+ .first-button {
+  color: black;
+  background-color: #FFFFFF;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 11px;
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  width: 79px;
+  height: 22px;
+  border-radius: 12.5px;
+  position: absolute;
+  top: 4.5%;
+  left: 74%;
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .img-8, .img-9, .img-10
+{
+  width: 100vw;
+  max-width: 100%;
+/*  width: 390px;*/
+  height: 80%;
+  overflow: hidden; /* Hide any overflow content */
+  display: flex; /* Use flexbox to center the image */
+  justify-content: center; /*
+  width: 390px;
+  height: 65%;
+/*  width: 100%;
+  max-width: 390px;
+  height: 60%;*/
+
+  position: absolute;
+ /* max-height: 85%;
+  object-fit: contain;*/
+/*  display: flex;
+  flex-direction: column;*/
+  top: 0;
+/*  width: 100%;
+  height: 100vh;*/
+  /*background-size: cover;
+  background-repeat: no-repeat;*/
+  background-position: center;
+  z-index: -18;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 36s;
+  animation-iteration-count: infinite;
+}
+
+section .img-1, section .img-2, section .img-3, section .img-4, section .img-5, section .img-6, section .img-7,
+section .img-8, section .img-9, section .img-10, section
+{
+  opacity: 1;
+  animation-name: iris;
+  animation-duration: 36s;
+  animation-iteration-count: infinite;
+}
+
+.img-1 { animation-delay: 0s; }
+.img-2 { animation-delay: 4s; }
+.img-3 { animation-delay: 8s; }
+.img-4 { animation-delay: 12s; }
+.img-5 { animation-delay: 16s; }
+.img-6 { animation-delay: 20s; }
+.img-7 { animation-delay: 24s; }
+.img-8 { animation-delay: 28s; }
+.img-9 { animation-delay: 32s; }
+.img-10 { animation-delay: 36s; }
+
+
+/* Banner Animations (4s per image, 16s total timeline)
+/*---------------------------------------------*/
+
+@keyframes crossfade {
+  /* This is the default behaviour as described by Jonathan Snook*/
+  00.00%  { opacity: 0; }
+  06.25%  { opacity: 1; }
+  25.00%  { opacity: 1; }
+  31.25%  { opacity: 0; }b
+  100.0%  { opacity: 0; }
+}
+
+@keyframes fade {
+  /* By offsetting the fade out and animating z-index, we can prevent the background from showing up at all*/
+  00.00%  { opacity: 0; z-index: -10; }
+  06.25%  { opacity: 1; z-index: -10; }
+  31.25%  { opacity: 1; z-index: -12; }
+  37.50%  { opacity: 0; z-index: -14; }
+  100.0%  { opacity: 0; z-index: -16; }
+}
+
+/* Animating a clip-path in Google Chrome can destroy performance...it's crazy CPU intensive */
+@keyframes iris {
+  00.0% { clip-path: circle(0% at 50% 0%); z-index: -10; }
+  12.5% { clip-path: circle(120% at 50% 0%); z-index: -10; }
+  31.25%  { clip-path: circle(120% at 50% 0%); z-index: -12; }
+  37.50%  { clip-path: circle(0% at 50% 0%); z-index: -14; }
+  100%  { clip-path: circle(0% at 50% 0%); z-index: -16; }
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+  padding: 5%;
+}
+
+.logo_black {
+
+  display: inline-block;
+
+
+}
+
+ .second-button {
+  display: inline-block;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  font-family: Helvetica Neue;
+  font-weight: 500;
+  width: 79px;
+  height: 22px;
+  border-radius: 12.5px;
+
+}
+
+.nav2 {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  padding-top: 1%;
+
+}
+
+nav ul li {
+/*  padding-right: 10%;*/
+    padding-left: 15%;
+}
+
+
+
+
+.iphone-frame {
+  width: 60%;
+  margin: 2% 20%;
+
+}
+ .big-button {
+   color: black;
+   background-color: #FFFFFF;
+   border: 1px solid #6D6D6D;
+   text-align: center;
+   text-decoration: none;
+   font-size: 17px;
+   font-family: GT America;
+   font-weight: 500;
+   width: 360px;
+   height: 50px;
+   border-radius: 15px;
+   margin: 3%;
+ }
+
+.page3-top {
+    position: relative;
+    text-align: left;
+}
+
+.overlay {
+    position: absolute;
+    top: 30%;
+    height: 102px;
+    width: 284px;
+    left: 10%;
+}
+
+.heading3 {
+    line-height: 36px;
+
+    color: black;
+    font-family: GT America;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.25px;
+    margin: 0;
+    text-align: left;
+    padding-top: 18%;
+    padding-left: 8%;
+}
+/*.genre-image {
+  position: absolute;
+  margin: 8%;
+}
+.page3-text {
+  position: absolute;
+  text-align: justify;
+  margin: 8%;
+}
+*/
+
+.page3-header {
+  width: 100%;
+  height: 30%;
+  background-image: url(Images/Vector.png);
+  background-size: 100% 100%;
+  background-position: center; /* Position the background image in the center */
+  background-repeat: no-repeat;
+}
+
+.page3-main {
+ margin: 5% 5%;
+ width: 90%;
+}
+
+/*.page3-text {
+
+    text-align: justify;
+    margin: 8%;
+}*/
+.page4-header {
+/*  width: 100%;*/
+  height: 74px;
+  margin: 5%;
+}
+
+ .heading4 {
+  color: #FFFFFF;
+  line-height: 1.5em;
+  font-size: 24px;
+  font font-family: GT America;
+  color: #000000;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: -0.25px;
+  padding: 5%;
+  text-align: left;
+
+}
+
+.page4-main {
+
+  width: 80%;
+  margin: 5% 10%;
+
+}
+
+.page4-text {
+ margin-top: 10%;
+}
+
+/*.img1-page4, .img2-page4 {
+  position: absolute;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -18;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+
+}*/
+
+/*section .img1-page4, section .img2-page4 {
+  opacity: 1;
+  animation-name: iris;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+}
+
+.img1-page4 { animation-delay: 0s; }
+.img2-page4 { animation-delay: 4s; }
+*/
+
+
+/* Banner Animations (4s per image, 16s total timeline)
+/*---------------------------------------------*/
+
+/*@keyframes crossfade {
+
+  00.00%  { opacity: 0; }
+  06.25%  { opacity: 1; }
+  25.00%  { opacity: 1; }
+  31.25%  { opacity: 0; }b
+  100.0%  { opacity: 0; }
+}
+
+@keyframes fade {
+
+  00.00%  { opacity: 0; z-index: -10; }
+  06.25%  { opacity: 1; z-index: -10; }
+  31.25%  { opacity: 1; z-index: -12; }
+  37.50%  { opacity: 0; z-index: -14; }
+  100.0%  { opacity: 0; z-index: -16; }
+}*/
+
+/* Animating a clip-path in Google Chrome can destroy performance...it's crazy CPU intensive */
+/*@keyframes iris {
+  00.0% { clip-path: circle(0% at 50% 0%); z-index: -10; }
+  12.5% { clip-path: circle(120% at 50% 0%); z-index: -10; }
+  31.25%  { clip-path: circle(120% at 50% 0%); z-index: -12; }
+  37.50%  { clip-path: circle(0% at 50% 0%); z-index: -14; }
+  100%  { clip-path: circle(0% at 50% 0%); z-index: -16; }
+}
+*/
+
+.page5-header {
+  height: 74px;
+  margin: 5%;
+}
+
+.page5-main {
+  width: 80%;
+  margin: 5% 10%;
+ }
+
+.page5-text {
+    text-align: left;
+    margin: 8%;
+}
+
+.page6-header {
+  height: 74px;
+  margin: 5%;
+}
+
+.page6-main {
+  width: 80%;
+  margin: 5% 10%;
+}
+
+.page6-text {
+    text-align: justify;
+    margin: 8%;
+}
+
+.img1-page7, .img2-page7, .img3-page7, .img4-page7 {
+  position: absolute;
+/*  display: flex;
+  flex-direction: column;*/
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -18;
+  opacity: 0;
+  animation-name: fade;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+section .img1-page7, section .img2-page7, section .img3-page7, section .img4-page7
+{
+  opacity: 1;
+  animation-name: iris;
+  animation-duration: 16s;
+  animation-iteration-count: infinite;
+}
+
+.img1-page7 { animation-delay: 0s; }
+.img2-page7 { animation-delay: 4s; }
+.img3-page7 { animation-delay: 8s; }
+.img4-page7 { animation-delay: 12s; }
+
+
+/* Banner Animations (4s per image, 16s total timeline)
+/*---------------------------------------------*/
+
+@keyframes crossfade {
+  /* This is the default behaviour as described by Jonathan Snook*/
+  00.00%  { opacity: 0; }
+  06.25%  { opacity: 1; }
+  25.00%  { opacity: 1; }
+  31.25%  { opacity: 0; }b
+  100.0%  { opacity: 0; }
+}
+
+@keyframes fade {
+  /* By offsetting the fade out and animating z-index, we can prevent the background from showing up at all*/
+  00.00%  { opacity: 0; z-index: -10; }
+  06.25%  { opacity: 1; z-index: -10; }
+  31.25%  { opacity: 1; z-index: -12; }
+  37.50%  { opacity: 0; z-index: -14; }
+  100.0%  { opacity: 0; z-index: -16; }
+}
+
+/* Animating a clip-path in Google Chrome can destroy performance...it's crazy CPU intensive */
+@keyframes iris {
+  00.0% { clip-path: circle(0% at 50% 0%); z-index: -10; }
+  12.5% { clip-path: circle(120% at 50% 0%); z-index: -10; }
+  31.25%  { clip-path: circle(120% at 50% 0%); z-index: -12; }
+  37.50%  { clip-path: circle(0% at 50% 0%); z-index: -14; }
+  100%  { clip-path: circle(0% at 50% 0%); z-index: -16; }
+}
+
+.page8-header {
+  height: 74px;
+  margin: 5%;
+}
+
+.page8-main {
+  width: 80%;
+  margin: 5% 10%;
+}
+
+.page8-text {
+    text-align: justify;
+    margin: 8%;
+}
+
+.page9-header {
+  height: 74px;
+  margin: 5%;
+}
+
+.heading9 {
+  color: #FFFFFF;
+  line-height: 1.5em;
+  font-size: 36px;
+  font font-family: GT America;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  padding: 5%;
+  text-align: left;
+}
+
+.page9-main {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.page9-text {
+    text-align: justify;
+    margin: 8%;
+}
