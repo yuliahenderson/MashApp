@@ -12,11 +12,11 @@
 
 @font-face {
   font-family: "GT America";
-  src: url(Fonts/GT-America-Extended-Bold.woff2)
+  src: url(/Fonts/GT-America-Extended-Bold.woff2)
 format('woff2'),
-  url(Fonts/GT-America-Extended-Bold.woff)
+  url(/Fonts/GT-America-Extended-Bold.woff)
 format('woff'),
-  url(Fonts/GT-America-Extended-Bold.tff)
+  url(/Fonts/GT-America-Extended-Bold.tff)
 format('truetype');
 
 /*  font-family: "GT America Standard";
