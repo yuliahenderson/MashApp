@@ -2,15 +2,32 @@
 
 }*/
 
-@font-face {
+/*@font-face {
   font-family: 'GT-America';
-  src: url('/Fonts/GT-America-Standard-Regular.otf') format('otf')
-
-  font-family: 'GT-America-Bold';
-  src: url('/Fonts/GT-America-Extended-Bold.otf') format('otf');
+  src: url('GT-America-Standard-Regular.woff2') format('woff2');
+  src: url('GT-America-Standard-Regular.woff') format('woff')
 
      }
+*/
 
+@font-face {
+  font-family: "GT America";
+  src: url(Fonts/GT-America-Extended-Bold.woff2)
+format('woff2'),
+  url(Fonts/GT-America-Extended-Bold.woff)
+format('woff'),
+  url(Fonts/GT-America-Extended-Bold.tff)
+format('truetype');
+
+/*  font-family: "GT America Standard";
+  src: url(Fonts/GT-America-Standard-Regular.woff2)
+format('woff2'),
+  url(Fonts/GT-America-Standard-Regular.woff)
+format('woff'),
+  url(Fonts/GT-America-Standard-Regular.tff)
+format('truetype');*/
+
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,7 +111,7 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
 }*/
 
 h1 {
-  font-family: GT America Bold;
+  font-family: GT America;
 
 }
 .heading1 {
@@ -131,7 +148,7 @@ p {
 
 p1, p2 {
   font-size: 16px;
-  font-family: GT America;
+  font-family: Helvetica Neue;
   font-weight: 400;
   line-height: 20px;
   text-align: justify;
