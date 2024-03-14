@@ -671,6 +671,10 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
   text-align: left;
 }
 
+ .page9 {
+  background-color: #F4F4F4;
+}
+
 .page9-main {
   margin-top: 10%;
   margin-bottom: 10%;
@@ -679,4 +683,59 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 .page9-text {
     text-align: justify;
     margin: 8%;
+}
+
+.page10-main {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.ian {
+    display: flex;
+    align-items: center;
+
+}
+
+.ian_image {
+  float: left;
+}
+.ian_about {
+  float: right;
+}
+
+.jules {
+    display: flex;
+    align-items: center;
+
+}
+.jules_image{
+  float: left;
+}
+.jules_about {
+  float: right;
+}
+
+.mlg {
+    display: flex;
+    align-items: center;
+}
+
+.mlg_image {
+  float: left;
+}
+.mlg_about {
+  float: right;
+}
+
+.bio1 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5%;
+}
+
+.bio {
+    margin: 5%;
+    display: block;
+    width: 90%;
+    text-align: justify;
 }
