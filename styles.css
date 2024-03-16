@@ -683,13 +683,14 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 
 .heading9 {
   color: #FFFFFF;
-  line-height: 1.5em;
+  line-height: 44px;
   font-size: 36px;
   font font-family: GT America;
   color: #000000;
   font-weight: 700;
   letter-spacing: -0.25px;
-  padding: 5%;
+  padding-left: 3%;
+  padding-top: 5%;
   text-align: left;
 }
 
