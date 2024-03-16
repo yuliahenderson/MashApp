@@ -710,6 +710,21 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 
 .page10-main {
 }
+
+.heading10 {
+  margin: 10%;
+  color: #FFFFFF;
+  line-height: 27px;
+  font-size: 24px;
+  font font-family: GT America;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  padding-left: 3%;
+  padding-top: 5%;
+  text-align: left;
+}
+
 .ian {
     display: flex;
     align-items: center;
