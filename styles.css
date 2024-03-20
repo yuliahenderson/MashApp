@@ -254,6 +254,9 @@ nav ul li a {
   font-size: 11px;
   font-family: Helvetica Neue;
   font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 2px;
+  align-items: center;
   width: 100px;
   height: 30px;
   border-radius: 12.5px;
