@@ -230,19 +230,19 @@ nav ul li a {
 .two {
   width: 100%;
   position: absolute;
-  bottom: 5%;
+  bottom: 20%;
 /*  margin-top: 5%;*/
 /*  display: flex;
   flex-direction: column;*/
 }
-.m-logo {
+#m-logo {
   position: absolute;
   left: 5%;
   margin-top: 4%;
 
 
 }
-.logo {
+#logo {
   position: absolute;
   left: 38%;
  margin-top: 7%;
@@ -433,7 +433,7 @@ nav ul li {
    margin: 3%;
  }
 
-.page3-top {
+/*.page3-top {
     position: relative;
     text-align: left;
 }
@@ -444,9 +444,9 @@ nav ul li {
     height: 102px;
     width: 284px;
     left: 10%;
-}
+}*/
 
-.heading3 {
+/*.heading3 {
     line-height: 36px;
 
     color: black;
@@ -458,7 +458,7 @@ nav ul li {
     text-align: left;
     padding-top: 18%;
     padding-left: 8%;
-}
+}*/
 /*.genre-image {
   position: absolute;
   margin: 8%;
@@ -482,11 +482,13 @@ nav ul li {
 
 .page3-title {
     position: absolute;
+    line-height: 34px;
+    letter-spacing: 0.25px;
     font-size: 24px;
     font-family: GT America;
     font-weight: 700;
     width: 70%;
-    top: 20%;
+    top: 25%;
     padding: 10px;
     text-align: left;
     left: 5%;
@@ -502,8 +504,8 @@ nav ul li {
 
 
 .page3-main {
- margin: 5% 5%;
- width: 90%;
+  margin: 5% 10%;
+  width: 80%;
 }
 
 /*.page3-text {
@@ -515,23 +517,21 @@ nav ul li {
 /*  width: 100%;*/
 /*  height: 74px;
   margin: 5%;*/
-      position: relative;
+    position: relative;
     width: 100%;
     margin-top: 15%;
 }
 
  .heading4 {
-  color: #FFFFFF;
-  line-height: 1.5em;
+  line-height: 34px;
+  letter-spacing: 0.25px;
   font-size: 24px;
   font font-family: GT America;
   color: #000000;
   font-weight: 700;
-  line-height: 27px;
-  letter-spacing: -0.25px;
-  padding: 5%;
+  padding: 10px;
   text-align: left;
-
+  margin-left: 5%;
 }
 
 .page4-main {
@@ -603,8 +603,9 @@ nav ul li {
 */
 
 .page5-header {
-  height: 74px;
-  margin: 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
 }
 
 .page5-main {
@@ -618,8 +619,9 @@ nav ul li {
 }
 
 .page6-header {
-  height: 74px;
-  margin: 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
 }
 
 .page6-main {
@@ -694,8 +696,9 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 }
 
 .page8-header {
-  height: 74px;
-  margin: 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
 }
 
 .page8-main {
@@ -709,8 +712,9 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 }
 
 .page9-header {
-  height: 74px;
-  margin: 5%;
+  position: relative;
+  width: 100%;
+  margin-top: 15%;
 }
 
 .heading9 {
