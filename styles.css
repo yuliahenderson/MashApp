@@ -437,8 +437,8 @@ nav ul li {
 
     .container-phone {
         position: relative;
-        width: 50%; /* Set your desired width */
-        height: 42%; /* Set your desired height */
+        width: 222px; /* Set your desired width */
+        height: 455px; /* Set your desired height */
         overflow: hidden;
          margin: 24% 25% 2% 25%;
     }
@@ -457,9 +457,9 @@ nav ul li {
         align-items: center;
     }
 
-    img {
-        max-width: 100%;
-        height: auto;
+    .slide img {
+        max-width: 222px;
+        height: 455px;
     }
 
     .iphone-frame {
