@@ -1,3 +1,28 @@
+        document.addEventListener("DOMContentLoaded", function () {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const containerHeight = document.querySelector('.container-phone').offsetHeight;
+        let index = 0;
+
+        // Set the height of each slide to match its image's height
+        slides.forEach(slide => {
+            const img = slide.querySelector('img');
+            img.onload = function() {
+                slide.style.height = img.offsetHeight + 'px';
+            }
+        });
+
+        function nextSlide() {
+            index++;
+            if (index === slides.length) {
+                index = 0;
+            }
+            slider.style.transform = `translateY(-${slides[index].offsetTop}px)`;
+        }
+
+        setInterval(nextSlide, 5000);
+    });
+
 
     document.addEventListener('DOMContentLoaded', function() {
         // Get reference to the scrollable container element
@@ -5,6 +30,8 @@
 
         // Get reference to the button in the fixed header
         var button = document.getElementById('scrollButton');
+         var mlogo = document.getElementById('m-logo');
+          var logo = document.getElementById('logo');
 
         // Function to check if scrolled to the second page
         function isScrolledToSecondPage() {
@@ -35,3 +62,5 @@
             }
         });
     });
+
+
