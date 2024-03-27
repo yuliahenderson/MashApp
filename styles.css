@@ -59,7 +59,7 @@ body {
 
 header {
   width: 100%;
-  height: 10%;
+  height: 8%;
   position: fixed;
   z-index: 1000;
   background-color: none;
@@ -118,6 +118,10 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   line-height: 1.5em;
   color: #ffffff;
 }*/
+
+#fixedHeader {
+  background-color: #F4F4F4;
+}
 
 h1 {
   font-family: GT America;
