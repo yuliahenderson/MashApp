@@ -120,7 +120,8 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
 }*/
 
 #fixedHeader {
-  background-color: #F4F4F4;
+/*  background-color: #F4F4F4;*/
+background-color: #FFFFFF;
 }
 
 h1 {
