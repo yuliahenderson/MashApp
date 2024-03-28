@@ -445,11 +445,11 @@ nav ul li {
  }
 
     .container-phone {
-        position: relative;
-        width: 222px; /* Set your desired width */
-        height: 455px; /* Set your desired height */
-        overflow: hidden;
-         margin: 5% 20% 2% 20%;
+    position: relative;
+    width: 222px;
+    height: 440px;
+    overflow: hidden;
+    margin: 5% 22% 2% 22%;
     }
 
     .slider {
