@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var scrollTop = container.scrollTop;
             var secondPageOffsetTop = secondPage.offsetTop;
 
-            return scrollTop >= secondPageOffsetTop - containerHeight / 2;
+            return scrollTop >= secondPageOffsetTop - containerHeight / 4;
         } else {
             console.error('Second page element not found.');
             return false;
