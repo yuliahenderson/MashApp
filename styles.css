@@ -282,7 +282,7 @@ nav ul li a {
 /*  line-height: 24px;*/
   letter-spacing: 2px;
   align-items: center;
-  width: 79px;
+  width: 80px;
   height: 22px;
   border-radius: 12.5px;
   position: absolute;
@@ -507,7 +507,7 @@ nav ul li {
     font-family: GT America;
     font-weight: 700;
     width: 80%;
-    top: 20%;
+    top: 22%;
     padding: 10px;
     text-align: left;
     left: 5%;
