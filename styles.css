@@ -256,7 +256,7 @@ nav ul li a {
 }
 #m-logo {
   position: absolute;
-  left: 5%;
+  left: 7%;
   margin-top: 4%;
 
 
@@ -279,15 +279,15 @@ nav ul li a {
   font-size: 11px;
   font-family: Helvetica Neue;
   font-weight: 500;
-  line-height: 24px;
+/*  line-height: 24px;*/
   letter-spacing: 2px;
   align-items: center;
-  width: 100px;
-  height: 30px;
+  width: 79px;
+  height: 22px;
   border-radius: 12.5px;
   position: absolute;
   margin-top: 5%;
-  left: 70%;
+  left: 75%;
 }
 
 
