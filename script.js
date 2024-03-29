@@ -1,3 +1,4 @@
+
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
@@ -24,13 +25,20 @@
     });
 
 
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get reference to the scrollable container element
     var container = document.querySelector('.container');
 
     // Get reference to the button in the fixed header
     var header = document.getElementById('fixedHeader');
+    var logo = document.getElementById('mlogo');
     var button = document.getElementById('scrollButton');
+
+
+    // Store the original logo source
+    var originalLogoSrc = logo.src;
 
     // Function to check if scrolled to the second page
     function isScrolledToSecondPage() {
@@ -55,11 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.backgroundColor = '#ffffff';
             button.style.color = '#ffffff';
             button.style.backgroundColor = '#000000'; // Change to desired color
+            logo.src = 'Images/logo_black.png'; // Change to the second logo image URL
         } else {
             // Revert button color to default when not scrolled to the second page
             header.style.backgroundColor = 'transparent';
             button.style.color = '#000000';
             button.style.backgroundColor = '#ffffff'; // Default button color
+            logo.src = originalLogoSrc; // Revert to the original logo image
         }
     });
 });

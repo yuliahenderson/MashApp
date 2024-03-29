@@ -166,9 +166,19 @@ p1, p2 {
   font-family: Helvetica Neue;
   font-weight: 400;
   line-height: 20px;
-  text-align: justify;
   padding: 0 8% 5% 8%;
+  text-align: justify;
 }
+
+/*#text {
+  width: 480px;
+  margin: 2em auto;
+  font-size: 16px;
+  font-family: Helvetica Neue;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: justify;
+}*/
 
 nav ul {
   list-style-type: none;
@@ -497,7 +507,7 @@ nav ul li {
     font-family: GT America;
     font-weight: 700;
     width: 80%;
-    top: 25%;
+    top: 15%;
     padding: 10px;
     text-align: left;
     left: 5%;
