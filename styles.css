@@ -469,14 +469,14 @@ nav ul li {
     height: 440px;
     overflow: hidden;
     margin: 5% 22% 2% 22%;
-border-radius: 40px;
+border-radius: 38px;
     }
 
     .slider {
         width: 100%;
         position: absolute;
         transition: transform 0.5s ease;
-        border-radius: 55px;
+        border-radius: 50px;
     }
 
     .slide {
@@ -485,13 +485,13 @@ border-radius: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 55px;
+        border-radius: 50px;
     }
 
     .slide img {
-        max-width: 222px;
+        max-width: 215px;
         height: 455px;
-        border-radius: 55px;
+        border-radius: 50px;
     }
 
     .iphone-frame {
