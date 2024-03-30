@@ -125,6 +125,9 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   height: 10%;
   position: fixed;
   z-index: 1000;
+
+/*  border-bottom: 1px #F4F4F4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;*/
 }
 
 h1 {
@@ -168,8 +171,14 @@ p1, p2 {
   line-height: 20px;
   padding: 0 8% 5% 8%;
   text-align: justify;
+        word-spacing: -1px; /* Adjust as needed */
+        letter-spacing: -0.5px; /* Adjust as needed */
+        hyphens: auto;
 }
 
+/*    .tight-spacing {
+        word-spacing: 0.05em;
+        letter-spacing: 0.05em;*/
 /*#text {
   width: 480px;
   margin: 2em auto;
@@ -460,12 +469,14 @@ nav ul li {
     height: 440px;
     overflow: hidden;
     margin: 5% 22% 2% 22%;
+border-radius: 40px;
     }
 
     .slider {
         width: 100%;
         position: absolute;
         transition: transform 0.5s ease;
+        border-radius: 55px;
     }
 
     .slide {
@@ -474,11 +485,13 @@ nav ul li {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 55px;
     }
 
     .slide img {
         max-width: 222px;
         height: 455px;
+        border-radius: 55px;
     }
 
     .iphone-frame {
@@ -555,7 +568,7 @@ nav ul li {
 .page4-main {
 
   width: 80%;
-  margin: 2% 10%;
+  margin: 2% 10% 8% 10%;
 
 }
 
@@ -628,7 +641,7 @@ nav ul li {
 
 .page5-main {
   width: 70%;
-  margin: 10% 15%;
+  margin: 2% 10% 8% 10%;
  }
 
 .page5-text {
@@ -644,7 +657,7 @@ nav ul li {
 
 .page6-main {
   width: 80%;
-  margin: 2% 10%;
+  margin: 2% 10% 8% 10%;
 }
 
 .page6-text {
@@ -724,7 +737,7 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 
 .page8-main {
   width: 80%;
-  margin: 2% 10%;
+  margin: 2% 10% 8% 10%;
 }
 
 .page8-text {
