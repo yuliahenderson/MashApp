@@ -732,7 +732,7 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 .page8-header {
   position: relative;
   width: 100%;
-  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 .page8-main {
@@ -748,7 +748,7 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 .page9-header {
   position: relative;
   width: 100%;
-  margin-top: 15%;
+  margin-top: 5%;
 }
 
 .heading9 {
