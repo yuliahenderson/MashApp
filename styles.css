@@ -126,8 +126,8 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   position: fixed;
   z-index: 1000;
 
-/*  border-bottom: 1px #F4F4F4;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;*/
+  border-bottom: 1px #F4F4F4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
 }
 
 h1 {
