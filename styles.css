@@ -194,7 +194,7 @@ p1, p2 {
   text-align: justify;
 }*/
 
-nav ul {
+/*nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -216,7 +216,7 @@ nav ul li a {
 
 .nav1 {
   padding: 4%;
-}
+}*/
 /* Banner Backgrounds
 /*---------------------------------------------*/
 
@@ -268,20 +268,54 @@ nav ul li a {
 /*  display: flex;
   flex-direction: column;*/
 }
+
 #m-logo {
   position: absolute;
   left: 7%;
   margin-top: 4%;
-
-
 }
+
 #logo {
   position: absolute;
   left: 38%;
  margin-top: 7%;
 
+}
+
+/* Style for the navigation links */
+nav {
+    position: absolute;
+    left: 30%; /* Adjust left position as needed */
+    margin-top: 5%; /* Adjust top margin as needed */
 
 }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica Neue;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between navigation items */
+}
+
+nav ul li:last-child {
+    margin-right: 0; /* Remove right margin for the last navigation item */
+}
+
+nav ul li a {
+    color: #000; /* Adjust link color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 11px; /* Adjust font size */
+}
+
 
  #scrollButton{
   color: black;
@@ -397,7 +431,7 @@ section .img-8, section .img-9, section .img-10, section
   padding: 5%;
 }*/
 
-.logo_black {
+/*.logo_black {
 
   display: inline-block;
 
@@ -417,20 +451,11 @@ section .img-8, section .img-9, section .img-10, section
   height: 30px;
   border-radius: 12.5px;
   margin-top: 1%;
-}
+}*/
 
-.nav2 {
-  display: inline-block;
-  width: 60%;
-  text-align: center;
-  padding-top: 2%;
 
-}
 
-nav ul li {
-/*  padding-right: 10%;*/
-    padding-left: 15%;
-}
+
 
 
  .pages .page2 {
