@@ -284,6 +284,7 @@ nav ul li a {
 
 /* Style for the navigation links */
 nav {
+  display: none;
     position: absolute;
     left: 32%; /* Adjust left position as needed */
     margin-top: 5%; /* Adjust top margin as needed */
@@ -335,7 +336,7 @@ nav ul li a {
   border-radius: 12.5px;
   position: absolute;
   margin-top: 5%;
-  left: 78%;
+  left: 77%;
 }
 
 
@@ -478,7 +479,7 @@ section .img-8, section .img-9, section .img-10, section
 }*/
 
 
- .big-button {
+/* .big-button {
    color: black;
    background-color: #FFFFFF;
    border: 1px solid #6D6D6D;
@@ -491,7 +492,7 @@ section .img-8, section .img-9, section .img-10, section
    height: 50px;
    border-radius: 15px;
    margin: 3%;
- }
+ }*/
 
     .container-phone {
     position: relative;
