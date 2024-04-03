@@ -285,7 +285,7 @@ nav ul li a {
 /* Style for the navigation links */
 nav {
     position: absolute;
-    left: 30%; /* Adjust left position as needed */
+    left: 32%; /* Adjust left position as needed */
     margin-top: 5%; /* Adjust top margin as needed */
 
 }
@@ -335,7 +335,7 @@ nav ul li a {
   border-radius: 12.5px;
   position: absolute;
   margin-top: 5%;
-  left: 77%;
+  left: 78%;
 }
 
 
