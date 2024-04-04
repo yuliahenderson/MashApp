@@ -541,14 +541,34 @@ border-radius: 38px;
 
 .page4-main {
 
-  width: 70%;
-  margin: 2% 15% 8% 15%;
+/*  width: 70%;
+  margin: 2% 15% 8% 15%;*/
+}
 
+#slider-page4 {
+    position: relative;
+/*    width: 344px; */
+    height: 470px; /* Adjust the height of the slider container */
+    overflow: hidden; /* Hide overflow content */
+    margin: 5% 15% 0% 15%;
+}
+
+
+
+.slider-image {
+    width: 100%; /* Make images responsive */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease; /* Add transition effect */
+    transform: translateX(0); /* Ensure the first image is initially positioned */
 }
 
 .page4-text {
  margin-top: 10%;
 }
+
+
 
 /*.img1-page4, .img2-page4 {
   position: absolute;
