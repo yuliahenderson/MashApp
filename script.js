@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (isScrolledToSecondPage()) {
             // Change button color when scrolled to the second page
             header.style.backgroundColor = '#ffffff';
-            header.style.borderBottom = '1px solid #F4F4F4';
-            header.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 2px 4px';
+            // header.style.borderBottom = '1px solid #F4F4F4';
+            // header.style.boxShadow = 'rgba(0, 0, 0, 0.1) 0px 2px 4px';
             button.style.color = '#ffffff';
             button.style.backgroundColor = '#000000'; // Change to desired color
             mlogo.src = 'Images/logo_black.png'; // Change to the second logo image URL
@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // Revert button color to default when not scrolled to the second page
             header.style.backgroundColor = 'transparent';
-            header.style.borderBottom = 'none';
-            header.style.boxShadow = 'none';
+            // header.style.borderBottom = 'none';
+            // header.style.boxShadow = 'none';
             button.style.color = '#000000';
             button.style.backgroundColor = '#ffffff'; // Default button color
             mlogo.src = originalLogoSrc; // Revert to the original logo image
