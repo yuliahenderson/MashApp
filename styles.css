@@ -743,11 +743,12 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 
  .page9 {
   background-color: #F4F4F4;
+  padding-bottom: 5%;
 }
 
 .page9-main {
   margin-top: 5%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 }
 
 .page9-text {
