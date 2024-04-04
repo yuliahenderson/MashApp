@@ -84,41 +84,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    var slider = document.getElementById('slider-page4');
-    var image1 = document.getElementById('image1');
-    var image2 = document.getElementById('image2');
-    var imageWidth = image1.clientWidth;
-    var slideInterval = 5000; // 5 seconds
+// document.addEventListener('DOMContentLoaded', function() {
+//     var slider = document.getElementById('slider-page4');
+//     var image1 = document.getElementById('image1');
+//     var image2 = document.getElementById('image2');
+//     var imageWidth = image1.clientWidth;
+//     var slideInterval = 5000; // 5 seconds
 
-    function slideImage() {
-        // Slide image1 away to the left
-        image1.style.transform = 'translateX(-' + imageWidth + 'px)';
+//     function slideImage() {
+//         // Slide image1 away to the left
+//         image1.style.transform = 'translateX(-' + imageWidth + 'px)';
 
-        // Slide image2 into view from the right
-        image2.style.transform = 'translateX(0)';
+//         // Slide image2 into view from the right
+//         image2.style.transform = 'translateX(0)';
 
-        // Swap z-index to ensure image2 appears on top
-        image1.style.zIndex = '1';
-        image2.style.zIndex = '2';
+//         // Swap z-index to ensure image2 appears on top
+//         image1.style.zIndex = '1';
+//         image2.style.zIndex = '2';
 
-        // Reset images after a delay
-        setTimeout(resetImages, slideInterval);
-    }
+//         // Reset images after a delay
+//         setTimeout(resetImages, slideInterval);
+//     }
 
-    function resetImages() {
-        // Reset image1 position and zIndex
-        image1.style.transform = 'translateX(0)';
-        image1.style.zIndex = '2';
+//     function resetImages() {
+//         // Reset image1 position and zIndex
+//         image1.style.transform = 'translateX(0)';
+//         image1.style.zIndex = '2';
 
-        // Reset image2 position and zIndex
-        image2.style.transform = 'translateX(' + imageWidth + 'px)';
-        image2.style.zIndex = '1';
-    }
+//         // Reset image2 position and zIndex
+//         image2.style.transform = 'translateX(' + imageWidth + 'px)';
+//         image2.style.zIndex = '1';
+//     }
 
-    // Initial slide after page load
-    slideImage();
+//     // Initial slide after page load
+//     slideImage();
 
-    // Repeat sliding every 5 seconds
-    setInterval(slideImage, slideInterval);
-});
+//     // Repeat sliding every 5 seconds
+//     setInterval(slideImage, slideInterval);
+// });
