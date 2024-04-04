@@ -1,12 +1,9 @@
-// Hide the URL bar on page load
-window.addEventListener('load', function() {
-    setTimeout(hideUrlBar, 300);
-});
+window.onload = function() {
+    setTimeout(function() {
+        window.scrollTo(0, 1);
+    }, 100);
+};
 
-// Hide URL bar function
-function hideUrlBar() {
-    window.scrollTo(0, 1);
-}
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
