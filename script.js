@@ -1,8 +1,9 @@
-window.onload = function() {
-    setTimeout(function() {
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
         window.scrollTo(0, 1);
-    }, 100);
-};
+    }, 0);
+});
 
 
         document.addEventListener("DOMContentLoaded", function () {
