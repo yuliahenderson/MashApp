@@ -1,16 +1,27 @@
-let lastScrollTop = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the Fullscreen API is supported
+    if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
+        var elem = document.documentElement; // Get the document element
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        // Function to request full screen
+        function requestFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+            }
+        }
 
-    if (scrollTop > lastScrollTop) {
-        document.body.classList.add('scrolling-down');
+        // Request full screen when the page is loaded
+        requestFullscreen();
     } else {
-        document.body.classList.remove('scrolling-down');
+        console.error('Fullscreen API is not supported');
     }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-}, false);
+});
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
