@@ -1,9 +1,16 @@
-window.addEventListener('load', function() {
-    // Hide the URL bar by scrolling slightly down
-    setTimeout(function() {
-        window.scrollTo(0, window.scrollY + 1);
-    }, 100);
-});
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        document.body.classList.add('scrolling-down');
+    } else {
+        document.body.classList.remove('scrolling-down');
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+}, false);
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
