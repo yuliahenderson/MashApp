@@ -125,9 +125,15 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   height: 10%;
   position: fixed;
   z-index: 1000;
+  transition: top 0.3s; /* Add smooth transition effect */
+
 
   /*border-bottom: 1px #F4F4F4;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;*/
+}
+
+body.scrolling-down #fixedHeader {
+    top: -50px; /* Adjust the height of the header */
 }
 
 h1 {
