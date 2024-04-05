@@ -1,14 +1,9 @@
-let lastScrollTop = 0;
-
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-        window.scrollTo(0, 1); // Scroll to hide the toolbar
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-}, false);
+window.addEventListener('load', function() {
+    // Hide the URL bar by scrolling slightly down
+    setTimeout(function() {
+        window.scrollTo(0, window.scrollY + 1);
+    }, 100);
+});
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
