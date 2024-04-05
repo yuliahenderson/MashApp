@@ -1,27 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if the Fullscreen API is supported
-    if (document.fullscreenEnabled || document.webkitFullscreenEnabled || document.mozFullScreenEnabled || document.msFullscreenEnabled) {
-        var elem = document.documentElement; // Get the document element
-
-        // Function to request full screen
-        function requestFullscreen() {
-            if (elem.requestFullscreen) {
-                elem.requestFullscreen();
-            } else if (elem.webkitRequestFullscreen) { /* Safari */
-                elem.webkitRequestFullscreen();
-            } else if (elem.mozRequestFullScreen) { /* Firefox */
-                elem.mozRequestFullScreen();
-            } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                elem.msRequestFullscreen();
-            }
-        }
-
-        // Request full screen when the page is loaded
-        requestFullscreen();
-    } else {
-        console.error('Fullscreen API is not supported');
-    }
-});
+/Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+    if (!pageYOffset) window.scrollTo(0, 1);
+}, 1000);
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
