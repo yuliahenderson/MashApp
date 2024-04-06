@@ -1,6 +1,6 @@
-/Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-    if (!pageYOffset) window.scrollTo(0, 1);
-}, 1000);
+// /Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+//     if (!pageYOffset) window.scrollTo(0, 1);
+// }, 1000);
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
