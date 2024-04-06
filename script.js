@@ -1,6 +1,5 @@
-// /Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
-//     if (!pageYOffset) window.scrollTo(0, 1);
-// }, 1000);
+
+window.top.scrollTo(0, 1);
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
