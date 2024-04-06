@@ -1,11 +1,6 @@
-// Wait for the page to fully load
-window.addEventListener('load', function() {
-    // Set a short delay (e.g., 300ms) to allow the page to render fully
-    setTimeout(function() {
-        // Scroll the page slightly to trigger hiding the address bar
-        window.scrollTo(0, 1);
-    }, 300); // Adjust the delay as needed (e.g., 300ms)
-});
+/Mobile/.test(navigator.userAgent) && !location.hash && setTimeout(function () {
+    if (!pageYOffset) window.scrollTo(0, 1);
+}, 1000);
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
