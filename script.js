@@ -1,5 +1,25 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Add event listener to the document body for touchstart event
+    document.body.addEventListener('touchstart', function() {
+        // Check if the user has started scrolling (touchmove event)
+        document.body.addEventListener('touchmove', function onScroll() {
+            // Request full-screen mode when scrolling begins
+            var container = document.documentElement; // Fullscreen target is the entire document
 
-window.top.scrollTo(0, 1);
+            if (container.requestFullscreen) {
+                container.requestFullscreen(); // Standard Fullscreen API
+            } else if (container.webkitRequestFullscreen) {
+                container.webkitRequestFullscreen(); // WebKit (Safari) Fullscreen API
+            } else if (container.msRequestFullscreen) {
+                container.msRequestFullscreen(); // Internet Explorer Fullscreen API
+            }
+
+            // Remove the touchmove event listener after scrolling begins
+            document.body.removeEventListener('touchmove', onScroll);
+        });
+    });
+});
+
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
