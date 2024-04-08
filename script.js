@@ -2,18 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the document body for touchstart event
     document.body.addEventListener('touchstart', function() {
         // Request fullscreen mode when user taps anywhere on the screen
-        var container = document.documentElement; // Fullscreen target is the entire document
+        var mcontainer = document.documentElement; // Fullscreen target is the entire document
 
-        if (container.requestFullscreen) {
-            container.requestFullscreen().catch(error => {
+        if (mcontainer.requestFullscreen) {
+            mcontainer.requestFullscreen().catch(error => {
                 console.error('Error while trying to enter fullscreen:', error);
             });
-        } else if (container.webkitRequestFullscreen) {
-            container.webkitRequestFullscreen().catch(error => {
+        } else if (mcontainer.webkitRequestFullscreen) {
+            mcontainer.webkitRequestFullscreen().catch(error => {
                 console.error('Error while trying to enter fullscreen:', error);
             });
-        } else if (container.msRequestFullscreen) {
-            container.msRequestFullscreen().catch(error => {
+        } else if (mcontainer.msRequestFullscreen) {
+            mcontainer.msRequestFullscreen().catch(error => {
                 console.error('Error while trying to enter fullscreen:', error);
             });
         }
