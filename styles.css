@@ -49,16 +49,17 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 */
 html {
-  position: relative;
+/*  position: relative;*/
   height: 100vh;
-  overflow: hidden;}
+  overflow: hidden;
+}
 
 body {
 
   height: 100vh;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 /*  -webkit-font-smoothing: antialiased;
   text-align: center;
   margin: 0;
