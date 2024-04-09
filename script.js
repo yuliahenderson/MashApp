@@ -1,5 +1,3 @@
-window.scrollTo(0,1)
-
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
