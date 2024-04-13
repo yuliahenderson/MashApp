@@ -419,7 +419,7 @@ section .img-8, section .img-9, section .img-10, section
   font-weight: 700;
   line-height: 27px;
   letter-spacing: -0.7px;
-  align-content: center;
+  text-align: center;
   padding: 5%;
 }
 /*.iphone-frame {
