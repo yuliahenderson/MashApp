@@ -122,7 +122,7 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
 
   background-color: transparent;
   width: 100%;
-  height: 10%;
+  height: 7%;
   position: fixed;
   z-index: 1000;
   transition: top 0.3s; /* Add smooth transition effect */
@@ -213,6 +213,7 @@ p1, p2 {
   width: 100%;
   position: absolute;
   bottom: 15%;
+  text-align: center;
 /*  margin-top: 5%;*/
 /*  display: flex;
   flex-direction: column;*/
@@ -294,7 +295,7 @@ nav ul li a {
   width: 100vw;
   max-width: 100%;
 /*  width: 390px;*/
-/*  height: 100vh;*/
+  height: 100vh;
   overflow: hidden; /* Hide any overflow content */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /*
