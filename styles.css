@@ -178,19 +178,22 @@ p1, p2 {
 .container {
 /*  width: 100%;*/
   height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory; /* Enable mandatory vertical snap scrolling */
+  scroll-padding-top: 1px; /* Ensure the first section snaps correctly */
 /*  overflow: scroll;
   scroll-snap-type: y mandatory;*/
 
 }
 .pages {
   position: relative;
-  overflow: scroll;
+/*  overflow: scroll;*/
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   margin-bottom: 5%;
-/*  scroll-snap-align: start;*/
+  scroll-snap-align: start;
 
 }
 .one {
@@ -470,7 +473,7 @@ border-radius: 38px;
     }
 
     .slide img {
-        max-width: 215px;
+        max-width: 222px;
 /*        height: 455px;*/
 /*        border-radius: 50px;*/
     }
