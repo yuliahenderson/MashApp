@@ -428,11 +428,11 @@ section .img-8, section .img-9, section .img-10, section
 
     .container-phone {
     position: relative;
-    width: 56%;
+    width: 230px;
     height: 460px;
     overflow: hidden;
-    margin: 5% 22% 2% 22%;
-border-radius: 38px;
+    margin: 5% 20% 2% 20%;
+    border-radius: 32px;
     }
 
     .slider {
@@ -460,9 +460,10 @@ border-radius: 38px;
     .iphone-frame {
         position: absolute;
         top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        left: 14%;
+        width: 280px;
+        height: 500px;
+        z-index: 1;
     }
 
 .page3-header {
