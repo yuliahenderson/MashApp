@@ -148,12 +148,12 @@ p {
   font-family: Helvetica;
   letter-spacing: -0.255px;
     font-weight: 400;
-  line-height: 24px;
+  line-height: 20px;
   word-spacing: 1px;
 }
 
 p1, p2 {
-  font-size: 16px;
+  font-size: 18px;
   font-family: Helvetica;
   font-weight: 400;
   line-height: 24px;
@@ -481,6 +481,7 @@ section .img-8, section .img-9, section .img-10, section
 .page3-header {
     position: relative;
     width: 100%;
+    margin-bottom: 3%;
 }
 .vector_image {
     display: block;
@@ -527,6 +528,7 @@ section .img-8, section .img-9, section .img-10, section
   margin: 5%;*/
     position: relative;
     width: 100%;
+    margin-bottom: 3%;
 }
 
  .heading4 {
@@ -612,6 +614,7 @@ section .img-8, section .img-9, section .img-10, section
 .page5-header {
   position: relative;
   width: 100%;
+  margin-bottom: 3%;
 /*  margin-top: 5%;*/
 }
 
@@ -628,6 +631,7 @@ section .img-8, section .img-9, section .img-10, section
 .page6-header {
   position: relative;
   width: 100%;
+  margin-bottom: 3%;
 /*  margin-top: 5%;*/
 }
 
@@ -708,12 +712,12 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
 .page8-header {
   position: relative;
   width: 100%;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .page8-main {
   width: 80%;
-  margin: 2% 10% 8% 10%;
+  margin: 0 10% 8% 10%;
 }
 
 .page8-text {
