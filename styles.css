@@ -436,7 +436,7 @@ section .img-8, section .img-9, section .img-10, section
     .container-phone {
     position: relative;
     width: 230px;
-    height: 460px;
+    height: 461px;
     overflow: hidden;
     margin: 5% 20% 8% 20%;
     border-radius: 32px;
