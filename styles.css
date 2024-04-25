@@ -136,7 +136,7 @@ h1 {
   font-family: GT America;
   font-weight: 700;
   line-height: 27px;
-  letter-spacing: -0.25px;
+  letter-spacing: -0.3px;
   align-content: center;
   padding: 5%;
 }
@@ -160,7 +160,7 @@ p1, p2 {
   padding: 0 8% 5% 8%;
   text-align: justify;
   word-spacing: 1px;
-  letter-spacing: -0.255px;
+  letter-spacing: -0.3px;
   hyphens: auto;
 }
 
