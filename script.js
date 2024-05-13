@@ -1,4 +1,5 @@
 
+
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
         const slides = document.querySelectorAll('.slide');
@@ -140,3 +141,75 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
 });
 
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Get reference to the button in the fixed header
+//     var header = document.getElementById('fixedHeader');
+//     var targetPage = document.getElementById('page3');
+
+//     // Function to check if scrolled to the third page
+//     function isScrolledToThirdPage() {
+//         var thirdPage = document.querySelector('.pages.page3');
+//         if (thirdPage) {
+//             var containerHeight = window.innerHeight;
+//             var scrollTop = window.scrollY || window.pageYOffset;
+//             var thirdPageOffsetTop = thirdPage.offsetTop;
+
+//             return scrollTop >= thirdPageOffsetTop - containerHeight / 4;
+//         } else {
+//             console.error('Third page element not found.');
+//             return false;
+//         }
+//     }
+
+//     // Function to handle scroll events
+//     function handleScroll() {
+//         // Check if scrolled to the second page
+//         if (isScrolledToThirdPage()) {
+//             // Change button color when scrolled to the second page
+//             header.style.backgroundColor = '#00ff00';
+//         }
+//     }
+
+//     // Initial call to handleScroll() to set initial state based on page load position
+//     handleScroll();
+
+//     // Attach scroll event listener to the window
+//     window.addEventListener('scroll', handleScroll);
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get reference to the fixed header
+    var header = document.getElementById('fixedHeader');
+
+    // Function to check if scrolled to page 3
+    function isScrolledToPage3() {
+        var page3 = document.getElementById('page3');
+        if (page3) {
+            var page3Top = page3.offsetTop;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var windowHeight = window.innerHeight;
+            var scrollThreshold = page3Top + (windowHeight * 0.25); // 25% of page3 height
+
+            return scrollTop >= page3Top && scrollTop < scrollThreshold;
+        } else {
+            console.error('Page 3 element not found.');
+            return false;
+        }
+    }
+
+    // Function to handle scroll events
+    function handleScroll() {
+        // Check if scrolled to page 3
+        if (isScrolledToPage3()) {
+            // Change header color to green
+            header.style.backgroundColor = '#00ff00';
+        }
+    }
+
+    // Initial call to handleScroll() to set initial state based on page load position
+    handleScroll();
+
+    // Attach scroll event listener to the window
+    window.addEventListener('scroll', handleScroll);
+});
