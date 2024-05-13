@@ -1,4 +1,14 @@
 
+// A simplification of a scroll-based theme-color changer
+window.addEventListener('scroll', () => {
+  const metaTag = document.querySelector('meta[name="theme-color"]');
+  if (window.scrollY / window.innerHeight > 0.8) {
+    metaTag.setAttribute("content", "#000000");
+  } else {
+    metaTag.setAttribute("content", "#ffffff");
+  }
+}, false);
+
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
