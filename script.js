@@ -1,14 +1,47 @@
 
-// A simplification of a scroll-based theme-color changer
-window.addEventListener('scroll', () => {
-  const metaTag = document.querySelector('meta[name="theme-color"]');
-  if (window.scrollY / window.innerHeight > 0.8) {
-    metaTag.setAttribute("content", "#000000");
-  } else {
-    metaTag.setAttribute("content", "#ffffff");
-  }
-}, false);
+// // A simplification of a scroll-based theme-color changer
+// window.addEventListener('scroll', () => {
+//   const metaTag = document.querySelector('meta[name="theme-color"]');
+//   if (window.scrollY / window.innerHeight > 0.8) {
+//     metaTag.setAttribute("content", "#000000");
+//   } else {
+//     metaTag.setAttribute("content", "#ffffff");
+//   }
+// }, false);
 
+document.addEventListener('DOMContentLoaded', function() {
+    var themeColorMeta = document.getElementById('theme-color-meta');
+
+    function isScrolledToEndOfSecondPage() {
+        var page2 = document.getElementById('page2');
+        if (page2) {
+            var page2Bottom = page2.offsetTop + page2.offsetHeight;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var windowHeight = window.innerHeight;
+
+            return scrollTop >= page2Bottom - windowHeight;
+        } else {
+            console.error('Page 2 element not found.');
+            return false;
+        }
+    }
+
+    function handleScroll() {
+        if (isScrolledToEndOfSecondPage()) {
+            // Change meta tag color to green when scrolled to the end of the second page
+            themeColorMeta.setAttribute('content', '#00ff00');
+        } else {
+            // Reset meta tag color to white
+            themeColorMeta.setAttribute('content', '#ffffff');
+        }
+    }
+
+    // Initial call to handleScroll() to set initial state based on page load position
+    handleScroll();
+
+    // Attach scroll event listener to the window
+    window.addEventListener('scroll', handleScroll);
+});
 
         document.addEventListener("DOMContentLoaded", function () {
         const slider = document.querySelector('.slider');
