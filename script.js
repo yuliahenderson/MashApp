@@ -222,9 +222,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
             // Change header color to green if scrolled to 95% of page2 and not scrolled to 25% of page3
             header.style.backgroundColor = '#00ff00';
-        } else {
-            // Reset header color to white
-            header.style.backgroundColor = '#fff';
         }
     }
 
