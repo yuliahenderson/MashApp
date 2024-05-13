@@ -182,14 +182,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get reference to the fixed header
     var header = document.getElementById('fixedHeader');
 
-    // Function to check if scrolled to 95% of page2
-    function isScrolledTo95PercentOfPage2() {
+    // Function to check if scrolled to 90% of page2
+    function isScrolledTo90PercentOfPage2() {
         var page2 = document.getElementById('page2');
         if (page2) {
             var page2Height = page2.offsetHeight;
             var page2Top = page2.offsetTop;
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var scrollThreshold = page2Top + (page2Height * 0.95); // 95% of page2 height
+            var scrollThreshold = page2Top + (page2Height * 0.9); // 90% of page2 height
 
             return scrollTop >= scrollThreshold;
         } else {
@@ -216,11 +216,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to handle scroll events
     function handleScroll() {
-        var scrolledTo95PercentOfPage2 = isScrolledTo95PercentOfPage2();
+        var scrolledTo90PercentOfPage2 = isScrolledTo90PercentOfPage2();
         var scrolledTo25PercentOfPage3 = isScrolledTo25PercentOfPage3();
 
-        if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
-            // Change header color to green if scrolled to 95% of page2 and not scrolled to 25% of page3
+        if (scrolledTo90PercentOfPage2 && !scrolledTo25PercentOfPage3) {
+            // Change header color to green if scrolled to 90% of page2 and not scrolled to 25% of page3
             header.style.backgroundColor = '#00ff00';
         }
     }
