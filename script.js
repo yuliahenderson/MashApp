@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get reference to the fixed header
     var header = document.getElementById('fixedHeader');
 
-    // Function to check if scrolled to 90% of page2
+    // Function to check if scrolled to 95% of page2
     function isScrolledTo90PercentOfPage2() {
         var page2 = document.getElementById('page2');
         if (page2) {
@@ -281,8 +281,119 @@ document.addEventListener('DOMContentLoaded', function() {
         var scrolledTo25PercentOfPage3 = isScrolledTo25PercentOfPage3();
 
         if (scrolledTo90PercentOfPage2 && !scrolledTo25PercentOfPage3) {
-            // Change header color to green if scrolled to 90% of page2 and not scrolled to 25% of page3
+            // Change header color to green if scrolled to 95% of page2 and not scrolled to 25% of page3
             header.style.backgroundColor = '#38FF27';
+        }
+    }
+
+    // Initial call to handleScroll() to set initial state based on page load position
+    handleScroll();
+
+    // Attach scroll event listener to the window
+    window.addEventListener('scroll', handleScroll);
+});
+
+
+//Page 8/9 color change for theme-color-meta
+document.addEventListener('DOMContentLoaded', function() {
+    var themeColorMeta = document.getElementById('theme-color-meta');
+
+    function isScrolledTo95PercentOfPage8() {
+        var page8 = document.getElementById('page8');
+        if (page8) {
+            var page8Height = page8.offsetHeight;
+            var page8Top = page8.offsetTop;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollThreshold = page8Top + (page8Height * 0.95); // 95% of page8 height
+
+            return scrollTop >= scrollThreshold;
+        } else {
+            console.error('Page 8 element not found.');
+            return false;
+        }
+    }
+
+    function isScrolledTo95PercentOfPage9() {
+        var page9 = document.getElementById('page9');
+        if (page9) {
+            var page9Top = page9.offsetTop;
+            var page9Height = page9.offsetHeight;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollThreshold = page9Top + (page3Height * 0.95); // 95% of page9 height
+
+            return scrollTop >= scrollThreshold;
+        } else {
+            console.error('Page 9 element not found.');
+            return false;
+        }
+    }
+
+    function handleScroll() {
+        var scrolledTo95PercentOfPage8 = isScrolledTo95PercentOfPage8();
+        var scrolledTo95PercentOfPage9 = isScrolledTo95PercentOfPage9();
+
+        if (scrolledTo95PercentOfPage8 && !scrolledTo95PercentOfPage9) {
+            // Change meta tag color to green when scrolled to 95% of page8 and not scrolled to 95% of page9
+            themeColorMeta.setAttribute('content', '#F4F4F4');
+        } else {
+            // Reset meta tag color to white
+            themeColorMeta.setAttribute('content', '#ffffff');
+        }
+    }
+
+    // Initial call to handleScroll() to set initial state based on page load position
+    handleScroll();
+
+    // Attach scroll event listener to the window
+    window.addEventListener('scroll', handleScroll);
+});
+
+
+//Fixed header color change to gray for page 8/9
+document.addEventListener('DOMContentLoaded', function() {
+    // Get reference to the fixed header
+    var header = document.getElementById('fixedHeader');
+
+    // Function to check if scrolled to 95% of page8
+    function isScrolledTo95PercentOfPage8() {
+        var page8 = document.getElementById('page8');
+        if (page8) {
+            var page8Height = page8.offsetHeight;
+            var page8Top = page8.offsetTop;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollThreshold = page8Top + (page8Height * 0.95); // 95% of page8 height
+
+            return scrollTop >= scrollThreshold;
+        } else {
+            console.error('Page 8 element not found.');
+            return false;
+        }
+    }
+
+    // Function to check if scrolled to 95% of page9
+    function isScrolledTo95PercentOfPage9() {
+        var page9 = document.getElementById('page9');
+        if (page9) {
+            var page9Top = page9.offsetTop;
+            var page9Height = page9.offsetHeight;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollThreshold = page9Top + (page9Height * 0.95); // 95% of page9 height
+
+            return scrollTop >= scrollThreshold;
+        } else {
+            console.error('Page 9 element not found.');
+            return false;
+        }
+    }
+
+    // Function to handle scroll events
+    function handleScroll() {
+        var scrolledTo95PercentOfPage8 = isScrolledTo95PercentOfPage8();
+        var scrolledTo95PercentOfPage9 = isScrolledTo95PercentOfPage9();
+
+        if (scrolledTo95PercentOfPage8 && !scrolledTo95PercentOfPage9) {
+            // Change header color to green if scrolled to 95% of page8 and not scrolled to 95% of page9
+            header.style.backgroundColor = '#F4F4F4';
         }
     }
 
