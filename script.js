@@ -8,27 +8,45 @@
 //     metaTag.setAttribute("content", "#ffffff");
 //   }
 // }, false);
-
 document.addEventListener('DOMContentLoaded', function() {
     var themeColorMeta = document.getElementById('theme-color-meta');
 
-    function isScrolledToEndOfSecondPage() {
+    function isScrolledTo95PercentOfPage2() {
         var page2 = document.getElementById('page2');
         if (page2) {
-            var page2Bottom = page2.offsetTop + page2.offsetHeight;
+            var page2Height = page2.offsetHeight;
+            var page2Top = page2.offsetTop;
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var windowHeight = window.innerHeight;
+            var scrollThreshold = page2Top + (page2Height * 0.95); // 95% of page2 height
 
-            return scrollTop >= page2Bottom - windowHeight;
+            return scrollTop >= scrollThreshold;
         } else {
             console.error('Page 2 element not found.');
             return false;
         }
     }
 
+    function isScrolledTo25PercentOfPage3() {
+        var page3 = document.getElementById('page3');
+        if (page3) {
+            var page3Top = page3.offsetTop;
+            var page3Height = page3.offsetHeight;
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            var scrollThreshold = page3Top + (page3Height * 0.25); // 25% of page3 height
+
+            return scrollTop >= scrollThreshold;
+        } else {
+            console.error('Page 3 element not found.');
+            return false;
+        }
+    }
+
     function handleScroll() {
-        if (isScrolledToEndOfSecondPage()) {
-            // Change meta tag color to green when scrolled to the end of the second page
+        var scrolledTo95PercentOfPage2 = isScrolledTo95PercentOfPage2();
+        var scrolledTo25PercentOfPage3 = isScrolledTo25PercentOfPage3();
+
+        if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
+            // Change meta tag color to green when scrolled to 95% of page2 and not scrolled to 25% of page3
             themeColorMeta.setAttribute('content', '#00ff00');
         } else {
             // Reset meta tag color to white
@@ -232,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var page2Height = page2.offsetHeight;
             var page2Top = page2.offsetTop;
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            var scrollThreshold = page2Top + (page2Height * 0.9); // 90% of page2 height
+            var scrollThreshold = page2Top + (page2Height * 0.95); // 95% of page2 height
 
             return scrollTop >= scrollThreshold;
         } else {
