@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
             // Change meta tag color to green when scrolled to 95% of page2 and not scrolled to 25% of page3
-            themeColorMeta.setAttribute('content', '#00ff00');
+            themeColorMeta.setAttribute('content', '#38FF27');
         } else {
             // Reset meta tag color to white
             themeColorMeta.setAttribute('content', '#ffffff');
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (scrolledTo90PercentOfPage2 && !scrolledTo25PercentOfPage3) {
             // Change header color to green if scrolled to 90% of page2 and not scrolled to 25% of page3
-            header.style.backgroundColor = '#00ff00';
+            header.style.backgroundColor = '#38FF27';
         }
     }
 
