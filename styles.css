@@ -435,10 +435,10 @@ section .img-8, section .img-9, section .img-10, section
 
     .container-phone {
     position: relative;
-    width: 230px;
+    width: 50%;
     height: 461px;
     overflow: hidden;
-    margin: 5% 20% 8% 20%;
+    margin: 5% 25% 8% 25%;
     border-radius: 32px;
     }
 
@@ -472,10 +472,12 @@ section .img-8, section .img-9, section .img-10, section
     .iphone-frame {
         position: absolute;
         top: 0;
-        left: 14%;
-        width: 280px;
+/*        left: 14%;*/
+        width: 64%;
+/*        width: 280px;*/
         height: 500px;
         z-index: 1;
+        margin: 0 18% 0 18%;
     }
 
 .page3-header {
