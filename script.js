@@ -150,28 +150,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    function handleScroll() {
-        var scrolledTo95PercentOfPage2 = isScrolledTo95PercentOfPage2();
-        var scrolledTo25PercentOfPage3 = isScrolledTo25PercentOfPage3();
-        var scrolledTo95PercentOfPage8 = isScrolledTo95PercentOfPage8();
-        var scrolledTo95PercentOfPage9 = isScrolledTo95PercentOfPage9();
+function handleScroll() {
+    var scrolledTo95PercentOfPage2 = isScrolledTo95PercentOfPage2();
+    var scrolledTo25PercentOfPage3 = isScrolledTo25PercentOfPage3();
+    var scrolledTo95PercentOfPage8 = isScrolledTo95PercentOfPage8();
+    var scrolledTo95PercentOfPage9 = isScrolledTo95PercentOfPage9();
 
-        if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
-            // Change meta tag color to green when scrolled to 95% of page2 and not scrolled to 25% of page3
-            themeColorMeta.setAttribute('content', '#38FF27');
-        } else {
-            // Reset meta tag color to white
-            themeColorMeta.setAttribute('content', '#ffffff');
-        }
-
-        if (scrolledTo95PercentOfPage8 && !scrolledTo95PercentOfPage9) {
-            // Change meta tag color to green when scrolled to 95% of page8 and not scrolled to 95% of page9
-            themeColorMeta.setAttribute('content', '#f4f4f4');
-        } else {
-            // Reset meta tag color to white
-            themeColorMeta.setAttribute('content', '#ffffff');
-        }
+    if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
+        // Change meta tag color to green when scrolled to 95% of page2 and not scrolled to 25% of page3
+        themeColorMeta.setAttribute('content', '#38FF27');
+    } else if (scrolledTo95PercentOfPage8 && !scrolledTo95PercentOfPage9) {
+        // Change meta tag color to grey when scrolled to 95% of page8 and not scrolled to 95% of page9
+        themeColorMeta.setAttribute('content', '#f4f4f4');
+    } else {
+        // Reset meta tag color to white if none of the above conditions are met
+        themeColorMeta.setAttribute('content', '#ffffff');
     }
+}
 
     // Initial call to handleScroll() to set initial state based on page load position
     handleScroll();
