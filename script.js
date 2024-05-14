@@ -28,9 +28,7 @@
     });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Get reference to the button in the fixed header
     var header = document.getElementById('fixedHeader');
     var mlogo = document.getElementById('mlogo');
     var button = document.getElementById('scrollButton');
@@ -40,49 +38,100 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store the original logo source
     var originalLogoSrc = mlogo.src;
 
-    // Function to check if scrolled to the second page
-    function isScrolledToSecondPage() {
-        var secondPage = document.querySelector('.pages.page2');
-        if (secondPage) {
-            var containerHeight = window.innerHeight;
+    function isScrolled5PercentOfPage1() {
+        var page1 = document.getElementById('page1');
+        if (page1) {
             var scrollTop = window.scrollY || window.pageYOffset;
-            var secondPageOffsetTop = secondPage.offsetTop;
-
-            return scrollTop >= secondPageOffsetTop - containerHeight / 4;
+            var scrollThreshold = page1.offsetHeight * 0.05; // 5% of page1 height
+            return scrollTop >= scrollThreshold;
         } else {
-            console.error('Second page element not found.');
+            console.error('Page 1 element not found.');
             return false;
         }
     }
 
-    // Function to handle scroll events
-    function handleScroll() {
-        // Check if scrolled to the second page
-        if (isScrolledToSecondPage()) {
-            // Change button color when scrolled to the second page
+    function changeColorsAndLogo() {
+        if (isScrolled5PercentOfPage1()) {
+            // Change colors and logo when scrolled 5% of page1
             header.style.backgroundColor = '#ffffff';
             button.style.color = '#ffffff';
-            button.style.backgroundColor = '#000000'; // Change to desired color
-            mlogo.src = 'Images/logo_black.png'; // Change to the second logo image URL
-            nav.style.display = 'block'; // show the nav element
-            logo.style.display = 'none'; // hide the logo element
+            button.style.backgroundColor = '#000000';
+            mlogo.src = 'Images/logo_black.png';
+            nav.style.display = 'block';
+            logo.style.display = 'none';
         } else {
-            // Revert button color to default when not scrolled to the second page
+            // Revert colors and logo when not scrolled 5% of page1
             header.style.backgroundColor = 'transparent';
             button.style.color = '#000000';
-            button.style.backgroundColor = '#ffffff'; // Default button color
-            mlogo.src = originalLogoSrc; // Revert to the original logo image
-            nav.style.display = 'none'; // Hide the nav element
-            logo.style.display = 'block'; // Show the logo element
+            button.style.backgroundColor = '#ffffff';
+            mlogo.src = originalLogoSrc;
+            nav.style.display = 'none';
+            logo.style.display = 'block';
         }
     }
 
-    // Initial call to handleScroll() to set initial state based on page load position
-    handleScroll();
+    // Call the function to set initial state based on page load position
+    changeColorsAndLogo();
 
     // Attach scroll event listener to the window
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', changeColorsAndLogo);
 });
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Get reference to the button in the fixed header
+//     var header = document.getElementById('fixedHeader');
+//     var mlogo = document.getElementById('mlogo');
+//     var button = document.getElementById('scrollButton');
+//     var nav = document.querySelector('nav');
+//     var logo = document.getElementById('logo');
+
+//     // Store the original logo source
+//     var originalLogoSrc = mlogo.src;
+
+//     // Function to check if scrolled to the second page
+//     function isScrolledToSecondPage() {
+//         var secondPage = document.querySelector('.pages.page2');
+//         if (secondPage) {
+//             var containerHeight = window.innerHeight;
+//             var scrollTop = window.scrollY || window.pageYOffset;
+//             var secondPageOffsetTop = secondPage.offsetTop;
+
+//             return scrollTop >= secondPageOffsetTop - containerHeight / 4;
+//         } else {
+//             console.error('Second page element not found.');
+//             return false;
+//         }
+//     }
+
+//     // Function to handle scroll events
+//     function handleScroll() {
+//         // Check if scrolled to the second page
+//         if (isScrolledToSecondPage()) {
+//             // Change button color when scrolled to the second page
+//             header.style.backgroundColor = '#ffffff';
+//             button.style.color = '#ffffff';
+//             button.style.backgroundColor = '#000000'; // Change to desired color
+//             mlogo.src = 'Images/logo_black.png'; // Change to the second logo image URL
+//             nav.style.display = 'block'; // show the nav element
+//             logo.style.display = 'none'; // hide the logo element
+//         } else {
+//             // Revert button color to default when not scrolled to the second page
+//             header.style.backgroundColor = 'transparent';
+//             button.style.color = '#000000';
+//             button.style.backgroundColor = '#ffffff'; // Default button color
+//             mlogo.src = originalLogoSrc; // Revert to the original logo image
+//             nav.style.display = 'none'; // Hide the nav element
+//             logo.style.display = 'block'; // Show the logo element
+//         }
+//     }
+
+//     // Initial call to handleScroll() to set initial state based on page load position
+//     handleScroll();
+
+//     // Attach scroll event listener to the window
+//     window.addEventListener('scroll', handleScroll);
+// });
 
 
 //Theme-color-meta color change
