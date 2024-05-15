@@ -27,6 +27,7 @@
         setInterval(nextSlide, 5000);
     });
 
+//fixed header change
 
 document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('fixedHeader');
@@ -42,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var page1 = document.getElementById('page1');
         if (page1) {
             var scrollTop = window.scrollY || window.pageYOffset;
-            var scrollThreshold = page1.offsetHeight * 0.05; // 5% of page1 height
+            var scrollThreshold = page1.offsetHeight * 0.10; // 10% of page1 height
             return scrollTop >= scrollThreshold;
         } else {
             console.error('Page 1 element not found.');
