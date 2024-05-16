@@ -10,10 +10,10 @@ format('truetype');
 }
 
   @font-face {
-    font-family: 'Helvetica', 'Ariel' sans-serif;
+    font-family: 'Helvetica-Regular', 'Ariel' sans-serif;
     font-style: normal;
     font-weight: normal;
-    src: local('Helvetica'), url('Helvetica.woff') format('woff');
+    src: local('Helvetica-Regular'), url('Helvetica-Regular.ttf') format('ttf');
     }
 
 /*  font-family: "GT America Standard";
@@ -154,7 +154,7 @@ p {
 
 p1, p2 {
   font-size: 18px;
-  font-family: Helvetica;
+  font-family: Helvetica-Regularß;
   font-weight: 400;
   line-height: 24px;
   padding: 0 8% 5% 8%;
