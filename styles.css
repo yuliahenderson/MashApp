@@ -114,13 +114,9 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   color: #ffffff;
 }*/
 
-@media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-    .mobile-only {
-        display: block;
-    }
+
+
+
 
 #fixedHeader {
 
@@ -869,3 +865,4 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
     top: 20%;
     padding: 10px;
 }
+
