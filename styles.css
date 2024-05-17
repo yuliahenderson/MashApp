@@ -10,10 +10,10 @@ format('truetype');
 }
 
   @font-face {
-    font-family: 'Helvetica-Regular', 'Ariel' sans-serif;
+    font-family: 'Helvetica', 'Ariel' sans-serif;
     font-style: normal;
     font-weight: normal;
-    src: local('Helvetica-Regular'), url('Helvetica-Regular.ttf') format('ttf');
+    src: local('Helvetica'), url('Helvetica.ttf') format('ttf');
     }
 
 /*  font-family: "GT America Standard";
@@ -146,21 +146,21 @@ p {
   font-size: 16px;
   width: 480px;
   margin: 2em auto;
-  font-family: Helvetica-Regular;
-  letter-spacing: -0.255px;
+  font-family: Helvetica;
+  letter-spacing: -0.3px;
     font-weight: 400;
   line-height: 20px;
-  word-spacing: 1px;
+  word-spacing: 0.1em;
 }
 
 p1, p2 {
   font-size: 16px;
-  font-family: Helvetica-Regular;
+  font-family: Helvetica;
   font-weight: 400;
   line-height: 24px;
   padding: 0 8% 5% 8%;
-  text-align: justify;
-  word-spacing: 1px;
+  text-align: left;
+  word-spacing: 0.1em;
   letter-spacing: -0.3px;
   hyphens: auto;
 }
