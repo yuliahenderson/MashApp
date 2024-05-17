@@ -114,6 +114,14 @@ a.info:hover, a.info:active, a.purchase:hover, a.purchase:active {
   color: #ffffff;
 }*/
 
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+
 #fixedHeader {
 
   background-color: transparent;
