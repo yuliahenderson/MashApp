@@ -29,6 +29,7 @@
 
 //fixed header change
 
+
 document.addEventListener('DOMContentLoaded', function() {
     var header = document.getElementById('fixedHeader');
     var mlogo = document.getElementById('mlogo');
@@ -57,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.backgroundColor = '#ffffff';
             button.style.color = '#ffffff';
             button.style.backgroundColor = '#000000';
-            mlogo.src = 'Images/black_logo.png';
+            mlogo.src = 'Images/logo_black.png';
             mlogo.style = 'width="45px" height="36px';
             nav.style.display = 'block';
             logo.style.display = 'none';
