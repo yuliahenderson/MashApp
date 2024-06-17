@@ -938,6 +938,19 @@ p1, p2 {
   hyphens: auto;
 }
 
+p1.mobile {
+  display: block;
+  font-size: 16px;
+  font-family: Helvetica;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 0 8% 5% 8%;
+  text-align: left;
+  word-spacing: 0.1em;
+  letter-spacing: -0.3px;
+  hyphens: auto;
+}
+
 p3.mobile {
   display: block;
   font-size: 16px;
