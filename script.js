@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', mobileSliderFunction);
                     themeColorMeta.setAttribute('content', '#f4f4f4');
                 }
                   else if (scrolledTo95PercentOfPage10 && !scrolledTo95PercentOfPage11) {
-                    console.log('Scrolled to 95% of Page 10 and not 95% of Page 11 - changing meta color to blue');
+                    console.log('Scrolled to 95% of Page 10 and not 25% of Page 11 - changing meta color to blue');
                     // Change meta tag color to blue when scrolled to 95% of page10 and not scrolled to 95% of page11
                     themeColorMeta.setAttribute('content', '#00C9FF');
                 }

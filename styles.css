@@ -561,7 +561,7 @@ section .img-8, section .img-9, section .img-10, section
 
 
 .slider-page4 {
-  width: 320px; /* Set your desired width */
+  width: 100%; /* Set your desired width */
   height: 560px; /* Set your desired height */
   position: relative;
   perspective: 1000px; /* Perspective for 3D effect */
@@ -1482,7 +1482,7 @@ section .img-8, section .img-9, section .img-10, section
 
 
 .slider-page4 {
-  width: 320px; /* Set your desired width */
+  width: 100%; /* Set your desired width */
   height: 560px; /* Set your desired height */
   position: relative;
   perspective: 1000px; /* Perspective for 3D effect */
