@@ -1,3 +1,6 @@
+
+
+
 // Function to detect if the device is desktop
 function isDesktop() {
     return window.matchMedia("(min-width: 993px)").matches;
@@ -86,28 +89,29 @@ function desktopFixedHeaderFunction() {
     window.addEventListener('scroll', changeColorsAndLogo);
 }
 
-// Function to initialize the slider
-function initializeSlider() {
+
+function DesktopInitializeSlider() {
   const slides = document.querySelectorAll('.slide4');
   let currentIndex = 0;
+  const intervalTime = 5000; // Interval time in milliseconds
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
       if (i === index) {
         slide.classList.add('active');
         slide.classList.remove('inactive');
-        console.log(`Showing slide ${i}`); // Log current slide index
+        console.log(`Showing slide ${i}`);
       } else {
         slide.classList.remove('active');
         slide.classList.add('inactive');
-        console.log(`Hiding slide ${i}`); // Log non-active slides
+        console.log(`Hiding slide ${i}`);
       }
     });
   }
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
-    console.log(`Next slide index: ${currentIndex}`); // Log next slide index
+    console.log(`Next slide index: ${currentIndex}`);
     showSlide(currentIndex);
   }
 
@@ -115,22 +119,19 @@ function initializeSlider() {
   showSlide(currentIndex);
 
   // Start the loop
-  setInterval(nextSlide, 5000); // Change image every 5 seconds
+  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
 }
 
-// Check if the user is on "page4"
-if (window.location.hash === '#page4') {
-  // Execute initializeSlider function when user is on "page4"
-  initializeSlider();
-}
-
-
+// Call initializeSlider function when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  DesktopInitializeSlider();
+});
 
         // Function to initialize all desktop-specific functionality
         function initializeDesktopFunctions() {
             desktopSliderFunction();
             desktopFixedHeaderFunction();
-            initializeSlider()
+            DesktopInitializeSlider()
             // Call other desktop-specific functions here
         }
 
@@ -432,23 +433,27 @@ document.addEventListener('DOMContentLoaded', mobileSliderFunction);
 
 // Function to initialize the slider
 function initializeSlider() {
-  const slides = document.querySelectorAll('.slide4');
+  const slides = document.querySelectorAll('.slide4-mobile');
   let currentIndex = 0;
+  const intervalTime = 5000; // Interval time in milliseconds
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
       if (i === index) {
         slide.classList.add('active');
         slide.classList.remove('inactive');
+        console.log(`Showing slide ${i}`);
       } else {
         slide.classList.remove('active');
         slide.classList.add('inactive');
+        console.log(`Hiding slide ${i}`);
       }
     });
   }
 
   function nextSlide() {
     currentIndex = (currentIndex + 1) % slides.length;
+    console.log(`Next slide index: ${currentIndex}`);
     showSlide(currentIndex);
   }
 
@@ -456,14 +461,13 @@ function initializeSlider() {
   showSlide(currentIndex);
 
   // Start the loop
-  setInterval(nextSlide, 5000); // Change image every 5 seconds
+  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
 }
 
-// Check if the user is on "page4"
-if (window.location.hash === '#page4') {
-  // Execute initializeSlider function when user is on "page4"
+// Call initializeSlider function when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
   initializeSlider();
-}
+});
 
 
         // Fixed header color change to grey on page 9
@@ -588,19 +592,37 @@ if (window.location.hash === '#page4') {
 });
 
 
-        document.addEventListener('DOMContentLoaded', () => {
-        const collapsibles = document.querySelectorAll('.collapsible');
+//         document.addEventListener('DOMContentLoaded', () => {
+//         const collapsibles = document.querySelectorAll('.collapsible');
+
+//     collapsibles.forEach(collapsible => {
+//     const toggleIcon = collapsible.querySelector('.toggle-icon');
+//     const hiddenContent = collapsible.querySelector('.hidden-content');
+
+//     toggleIcon.addEventListener('click', () => {
+//       hiddenContent.classList.toggle('active');
+//       toggleIcon.classList.toggle('active');
+//     });
+//   });
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const collapsibles = document.querySelectorAll('.collapsible');
+    console.log('Collapsibles found:', collapsibles.length); // Log the number of collapsibles found
 
     collapsibles.forEach(collapsible => {
-    const toggleIcon = collapsible.querySelector('.toggle-icon');
-    const hiddenContent = collapsible.querySelector('.hidden-content');
+        const toggleIcon = collapsible.querySelector('.toggle-icon');
+        const hiddenContent = collapsible.querySelector('.hidden-content');
 
-    toggleIcon.addEventListener('click', () => {
-      hiddenContent.classList.toggle('active');
-      toggleIcon.classList.toggle('active');
+        if (toggleIcon && hiddenContent) { // Ensure both elements exist
+            toggleIcon.addEventListener('click', () => {
+                hiddenContent.classList.toggle('active');
+                toggleIcon.classList.toggle('active');
+            });
+        } else {
+            console.error('Missing .toggle-icon or .hidden-content for a collapsible element:', collapsible);
+        }
     });
-  });
 });
-
 
 
