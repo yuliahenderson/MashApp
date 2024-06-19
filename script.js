@@ -127,11 +127,124 @@ document.addEventListener('DOMContentLoaded', () => {
   DesktopInitializeSlider();
 });
 
+function DesktopInitializeSlider7() {
+  const slides = document.querySelectorAll('.slide7');
+  let currentIndex = 0;
+  const intervalTime = 5000; // Interval time in milliseconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.classList.remove('inactive');
+        console.log(`Showing slide ${i}`);
+      } else {
+        slide.classList.remove('active');
+        slide.classList.add('inactive');
+        console.log(`Hiding slide ${i}`);
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    console.log(`Next slide index: ${currentIndex}`);
+    showSlide(currentIndex);
+  }
+
+  // Initial setup
+  showSlide(currentIndex);
+
+  // Start the loop
+  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+// Call initializeSlider function when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  DesktopInitializeSlider7();
+});
+
+function DesktopInitializeSlider2Page7() {
+  const slides = document.querySelectorAll('.slide7-2');
+  let currentIndex = 0;
+  const intervalTime = 10000; // Interval time in milliseconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.classList.remove('inactive');
+        console.log(`Showing slide ${i}`);
+      } else {
+        slide.classList.remove('active');
+        slide.classList.add('inactive');
+        console.log(`Hiding slide ${i}`);
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    console.log(`Next slide index: ${currentIndex}`);
+    showSlide(currentIndex);
+  }
+
+  // Initial setup
+  showSlide(currentIndex);
+
+  // Start the loop
+  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+// Call initializeSlider function when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  DesktopInitializeSlider2Page7();
+});
+
+function DesktopInitializeSlider3Page7() {
+  const slides = document.querySelectorAll('.slide7-3');
+  let currentIndex = 0;
+  const intervalTime = 5000; // Interval time in milliseconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.add('active');
+        slide.classList.remove('inactive');
+        console.log(`Showing slide ${i}`);
+      } else {
+        slide.classList.remove('active');
+        slide.classList.add('inactive');
+        console.log(`Hiding slide ${i}`);
+      }
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    console.log(`Next slide index: ${currentIndex}`);
+    showSlide(currentIndex);
+  }
+
+  // Initial setup
+  showSlide(currentIndex);
+
+  // Start the loop
+  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+// Call initializeSlider function when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  DesktopInitializeSlider3Page7();
+});
         // Function to initialize all desktop-specific functionality
         function initializeDesktopFunctions() {
             desktopSliderFunction();
             desktopFixedHeaderFunction();
             DesktopInitializeSlider()
+            DesktopInitializeSlider7();
+            DesktopInitializeSlider2Page7();
+            DesktopInitializeSlider3Page7();
             // Call other desktop-specific functions here
         }
 
