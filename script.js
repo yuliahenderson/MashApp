@@ -1,47 +1,20 @@
-
-
-
 // Function to detect if the device is desktop
 function isDesktop() {
     return window.matchMedia("(min-width: 993px)").matches;
 }
 
-// Ensure the code runs only when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    if (isDesktop()) {
-        console.log("Running desktop-specific scripts...");
+// Function to check if the user is on page2
+function isUserOnSpecificPage() {
+    var page2 = document.getElementById('page2');
+    if (page2) {
+        var rect = page2.getBoundingClientRect();
+        // Adjusted condition to check if page2 is at least partially visible
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+    return false;
+}
 
-        // Desktop-specific JavaScript functions
-
-        // Slider functionality
-        function desktopSliderFunction() {
-            const slider = document.querySelector('.slider');
-            const slides = document.querySelectorAll('.slide');
-            const containerHeight = document.querySelector('.container-phone').offsetHeight;
-            let index = 0;
-
-            // Set the height of each slide to match its image's height
-            slides.forEach(slide => {
-                const img = slide.querySelector('img');
-                img.onload = function() {
-                    slide.style.height = img.offsetHeight + 'px';
-                }
-                if (img.complete) { // Ensure height is set if image is already loaded
-                    img.onload();
-                }
-            });
-
-            function nextSlide() {
-                index++;
-                if (index === slides.length) {
-                    index = 0;
-                }
-                slider.style.transform = `translateY(-${slides[index].offsetTop}px)`;
-            }
-
-            setInterval(nextSlide, 5000);
-        }
-
+// Function to handle header and logo changes for page2
 function desktopFixedHeaderFunction() {
     var header = document.getElementById('fixedHeader');
     var mlogo = document.getElementById('mlogo');
@@ -52,32 +25,26 @@ function desktopFixedHeaderFunction() {
     // Store the original logo source
     var originalLogoSrc = mlogo.src;
 
-    function isScrollSnappedToPage2() {
-        var page2 = document.getElementById('page2');
-        if (page2) {
-            var rect = page2.getBoundingClientRect();
-            return rect.top >= 0 && rect.bottom <= window.innerHeight && Math.abs(rect.top) % window.innerHeight === 0;
-        }
-        return false;
-    }
-
     function changeColorsAndLogo() {
-        if (isScrollSnappedToPage2()) {
-            // Change colors and logo when scroll-snapped to page2
+        if (isUserOnSpecificPage()) {
+            // Change colors and logo when on page2
+            console.log("User is on page2");
             header.style.backgroundColor = '#ffffff';
             button.style.color = '#ffffff';
             button.style.backgroundColor = '#000000';
             mlogo.src = 'Images/logo_black.png';
-            mlogo.style = 'width="45px" height="36px';
+            mlogo.style.width = "45px";
+            mlogo.style.height = "36px";
             nav.style.display = 'block';
             logo.style.display = 'none';
         } else {
-            // Revert colors and logo when not scroll-snapped to page2
+            // Revert colors and logo when not on page2
+            console.log("User is not on page2");
             header.style.backgroundColor = 'transparent';
             button.style.color = '#000000';
             button.style.backgroundColor = '#ffffff';
             mlogo.src = originalLogoSrc;
-            // nav.style.display = 'none';
+            nav.style.display = 'none';
             logo.style.display = 'block';
         }
     }
@@ -85,171 +52,183 @@ function desktopFixedHeaderFunction() {
     // Call the function to set initial state based on page load position
     changeColorsAndLogo();
 
-    // Attach scroll event listener to the window
+    // Listen to scroll events to dynamically update header
     window.addEventListener('scroll', changeColorsAndLogo);
 }
 
+// Other desktop-specific JavaScript functions (e.g., slider functions) can be initialized here if needed
+function desktopSliderFunction() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const containerHeight = document.querySelector('.container-phone').offsetHeight;
+    let index = 0;
 
-function DesktopInitializeSlider() {
-  const slides = document.querySelectorAll('.slide4');
-  let currentIndex = 0;
-  const intervalTime = 5000; // Interval time in milliseconds
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.classList.remove('inactive');
-        console.log(`Showing slide ${i}`);
-      } else {
-        slide.classList.remove('active');
-        slide.classList.add('inactive');
-        console.log(`Hiding slide ${i}`);
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    console.log(`Next slide index: ${currentIndex}`);
-    showSlide(currentIndex);
-  }
-
-  // Initial setup
-  showSlide(currentIndex);
-
-  // Start the loop
-  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
-
-// Call initializeSlider function when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  DesktopInitializeSlider();
-});
-
-function DesktopInitializeSlider7() {
-  const slides = document.querySelectorAll('.slide7');
-  let currentIndex = 0;
-  const intervalTime = 5000; // Interval time in milliseconds
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.classList.remove('inactive');
-        console.log(`Showing slide ${i}`);
-      } else {
-        slide.classList.remove('active');
-        slide.classList.add('inactive');
-        console.log(`Hiding slide ${i}`);
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    console.log(`Next slide index: ${currentIndex}`);
-    showSlide(currentIndex);
-  }
-
-  // Initial setup
-  showSlide(currentIndex);
-
-  // Start the loop
-  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
-
-// Call initializeSlider function when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  DesktopInitializeSlider7();
-});
-
-function DesktopInitializeSlider2Page7() {
-  const slides = document.querySelectorAll('.slide7-2');
-  let currentIndex = 0;
-  const intervalTime = 10000; // Interval time in milliseconds
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.classList.remove('inactive');
-        console.log(`Showing slide ${i}`);
-      } else {
-        slide.classList.remove('active');
-        slide.classList.add('inactive');
-        console.log(`Hiding slide ${i}`);
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    console.log(`Next slide index: ${currentIndex}`);
-    showSlide(currentIndex);
-  }
-
-  // Initial setup
-  showSlide(currentIndex);
-
-  // Start the loop
-  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
-
-// Call initializeSlider function when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  DesktopInitializeSlider2Page7();
-});
-
-function DesktopInitializeSlider3Page7() {
-  const slides = document.querySelectorAll('.slide7-3');
-  let currentIndex = 0;
-  const intervalTime = 5000; // Interval time in milliseconds
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.add('active');
-        slide.classList.remove('inactive');
-        console.log(`Showing slide ${i}`);
-      } else {
-        slide.classList.remove('active');
-        slide.classList.add('inactive');
-        console.log(`Hiding slide ${i}`);
-      }
-    });
-  }
-
-  function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    console.log(`Next slide index: ${currentIndex}`);
-    showSlide(currentIndex);
-  }
-
-  // Initial setup
-  showSlide(currentIndex);
-
-  // Start the loop
-  setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
-
-// Call initializeSlider function when DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-  DesktopInitializeSlider3Page7();
-});
-        // Function to initialize all desktop-specific functionality
-        function initializeDesktopFunctions() {
-            desktopSliderFunction();
-            desktopFixedHeaderFunction();
-            DesktopInitializeSlider()
-            DesktopInitializeSlider7();
-            DesktopInitializeSlider2Page7();
-            DesktopInitializeSlider3Page7();
-            // Call other desktop-specific functions here
+    // Set the height of each slide to match its image's height
+    slides.forEach(slide => {
+        const img = slide.querySelector('img');
+        img.onload = function() {
+            slide.style.height = img.offsetHeight + 'px';
         }
+        if (img.complete) { // Ensure height is set if image is already loaded
+            img.onload();
+        }
+    });
 
-        // Initialize all desktop functions
-        initializeDesktopFunctions();
+    function nextSlide() {
+        index++;
+        if (index === slides.length) {
+            index = 0;
+        }
+        slider.style.transform = `translateY(-${slides[index].offsetTop}px)`;
+    }
+
+    setInterval(nextSlide, 5000);
+}
+
+function desktopInitializeSlider() {
+    const slides = document.querySelectorAll('.slide4');
+    let currentIndex = 0;
+    const intervalTime = 5000; // Interval time in milliseconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.remove('inactive');
+                console.log(`Showing slide ${i}`);
+            } else {
+                slide.classList.remove('active');
+                slide.classList.add('inactive');
+                console.log(`Hiding slide ${i}`);
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        console.log(`Next slide index: ${currentIndex}`);
+        showSlide(currentIndex);
+    }
+
+    // Initial setup
+    showSlide(currentIndex);
+
+    // Start the loop
+    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+function desktopInitializeSlider7() {
+    const slides = document.querySelectorAll('.slide7');
+    let currentIndex = 0;
+    const intervalTime = 5000; // Interval time in milliseconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.remove('inactive');
+                console.log(`Showing slide ${i}`);
+            } else {
+                slide.classList.remove('active');
+                slide.classList.add('inactive');
+                console.log(`Hiding slide ${i}`);
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        console.log(`Next slide index: ${currentIndex}`);
+        showSlide(currentIndex);
+    }
+
+    // Initial setup
+    showSlide(currentIndex);
+
+    // Start the loop
+    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+function desktopInitializeSlider2Page7() {
+    const slides = document.querySelectorAll('.slide7-2');
+    let currentIndex = 0;
+    const intervalTime = 10000; // Interval time in milliseconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.remove('inactive');
+                console.log(`Showing slide ${i}`);
+            } else {
+                slide.classList.remove('active');
+                slide.classList.add('inactive');
+                console.log(`Hiding slide ${i}`);
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        console.log(`Next slide index: ${currentIndex}`);
+        showSlide(currentIndex);
+    }
+
+    // Initial setup
+    showSlide(currentIndex);
+
+    // Start the loop
+    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+function desktopInitializeSlider3Page7() {
+    const slides = document.querySelectorAll('.slide7-3');
+    let currentIndex = 0;
+    const intervalTime = 5000; // Interval time in milliseconds
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.remove('inactive');
+                console.log(`Showing slide ${i}`);
+            } else {
+                slide.classList.remove('active');
+                slide.classList.add('inactive');
+                console.log(`Hiding slide ${i}`);
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        console.log(`Next slide index: ${currentIndex}`);
+        showSlide(currentIndex);
+    }
+
+    // Initial setup
+    showSlide(currentIndex);
+
+    // Start the loop
+    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
+}
+
+// Ensure the code runs only when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM fully loaded");
+
+    if (isDesktop()) {
+        console.log("Device is desktop");
+
+        // Initialize desktop-specific functions for page2
+        desktopFixedHeaderFunction();
+        desktopSliderFunction();
+        desktopInitializeSlider();
+        desktopInitializeSlider7();
+        desktopInitializeSlider2Page7();
+        desktopInitializeSlider3Page7();
+    } else {
+        console.log("Device is not desktop");
     }
 });
 

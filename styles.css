@@ -766,6 +766,9 @@ section .img-8, section .img-9, section .img-10, section
 .page8-main {
   margin-left: 5%;
   width: 24%;
+ /* border: 1px solid;
+  border-color: #6e6d6b;*/
+
 }
 
 .page9-main {
