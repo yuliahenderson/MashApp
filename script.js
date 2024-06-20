@@ -420,13 +420,13 @@ document.addEventListener('DOMContentLoaded', mobileSliderFunction);
                 }
             }
 
-            function isScrolledTo95PercentOfPage11() {
+            function isScrolledTo25PercentOfPage11() {
                 var page11 = document.getElementById('page11');
                 if (page11) {
                     var page11Top = page11.offsetTop;
                     var page11Height = page11.offsetHeight;
                     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                    var scrollThreshold = page11Top + (page11Height * 0.95); // 95% of page11 height
+                    var scrollThreshold = page11Top + (page11Height * 0.25); // 25% of page11 height
 
                     return scrollTop >= scrollThreshold;
                 } else {
@@ -441,7 +441,7 @@ document.addEventListener('DOMContentLoaded', mobileSliderFunction);
                 var scrolledTo95PercentOfPage8 = isScrolledTo95PercentOfPage8();
                 var scrolledTo95PercentOfPage9 = isScrolledTo95PercentOfPage9();
                 var scrolledTo95PercentOfPage10 = isScrolledTo95PercentOfPage10();
-                var scrolledTo95PercentOfPage11 = isScrolledTo95PercentOfPage11();
+                var scrolledTo25PercentOfPage11 = isScrolledTo25PercentOfPage11();
 
                 if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
                     console.log('Scrolled to 95% of Page 2 and not 25% of Page 3 - changing meta color to green');
