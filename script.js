@@ -3,58 +3,6 @@ function isDesktop() {
     return window.matchMedia("(min-width: 993px)").matches;
 }
 
-// Function to check if the user is on page2
-function isUserOnSpecificPage() {
-    var page2 = document.getElementById('page2');
-    if (page2) {
-        var rect = page2.getBoundingClientRect();
-        // Adjusted condition to check if page2 is at least partially visible
-        return rect.top >= 0 && rect.bottom <= window.innerHeight;
-    }
-    return false;
-}
-
-// Function to handle header and logo changes for page2
-function desktopFixedHeaderFunction() {
-    var header = document.getElementById('fixedHeader');
-    var mlogo = document.getElementById('mlogo');
-    var button = document.getElementById('scrollButton');
-    var nav = document.querySelector('nav');
-    var logo = document.getElementById('logo');
-
-    // Store the original logo source
-    var originalLogoSrc = mlogo.src;
-
-    function changeColorsAndLogo() {
-        if (isUserOnSpecificPage()) {
-            // Change colors and logo when on page2
-            console.log("User is on page2");
-            header.style.backgroundColor = '#ffffff';
-            button.style.color = '#ffffff';
-            button.style.backgroundColor = '#000000';
-            mlogo.src = 'Images/logo_black.png';
-            mlogo.style.width = "45px";
-            mlogo.style.height = "36px";
-            nav.style.display = 'block';
-            logo.style.display = 'none';
-        } else {
-            // Revert colors and logo when not on page2
-            console.log("User is not on page2");
-            header.style.backgroundColor = 'transparent';
-            button.style.color = '#000000';
-            button.style.backgroundColor = '#ffffff';
-            mlogo.src = originalLogoSrc;
-            nav.style.display = 'none';
-            logo.style.display = 'block';
-        }
-    }
-
-    // Call the function to set initial state based on page load position
-    changeColorsAndLogo();
-
-    // Listen to scroll events to dynamically update header
-    window.addEventListener('scroll', changeColorsAndLogo);
-}
 
 // Other desktop-specific JavaScript functions (e.g., slider functions) can be initialized here if needed
 function desktopSliderFunction() {
@@ -221,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Device is desktop");
 
         // Initialize desktop-specific functions for page2
-        desktopFixedHeaderFunction();
+        // desktopFixedHeaderFunction();
         desktopSliderFunction();
         desktopInitializeSlider();
         desktopInitializeSlider7();
