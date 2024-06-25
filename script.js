@@ -1,184 +1,190 @@
 // Function to detect if the device is desktop
-function isDesktop() {
-    return window.matchMedia("(min-width: 993px)").matches;
-}
+    function isDesktop() {
+        return window.matchMedia("(min-width: 993px)").matches;
+    }
+
 
 
 // Other desktop-specific JavaScript functions (e.g., slider functions) can be initialized here if needed
-function desktopSliderFunction() {
-    const slider = document.querySelector('.slider');
-    const slides = document.querySelectorAll('.slide');
-    const containerHeight = document.querySelector('.container-phone').offsetHeight;
-    let index = 0;
+    function desktopSliderFunction() {
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const containerHeight = document.querySelector('.container-phone').offsetHeight;
+        let index = 0;
 
-    // Set the height of each slide to match its image's height
-    slides.forEach(slide => {
-        const img = slide.querySelector('img');
-        img.onload = function() {
-            slide.style.height = img.offsetHeight + 'px';
+        // Set the height of each slide to match its image's height
+        slides.forEach(slide => {
+            const img = slide.querySelector('img');
+            img.onload = function() {
+                slide.style.height = img.offsetHeight + 'px';
+            }
+            if (img.complete) { // Ensure height is set if image is already loaded
+                img.onload();
+            }
+        });
+
+        function nextSlide() {
+            index++;
+            if (index === slides.length) {
+                index = 0;
+            }
+            slider.style.transform = `translateY(-${slides[index].offsetTop}px)`;
         }
-        if (img.complete) { // Ensure height is set if image is already loaded
-            img.onload();
+
+        setInterval(nextSlide, 5000);
+    }
+
+    function desktopInitializeSlider() {
+        const slides = document.querySelectorAll('.slide4');
+        let currentIndex = 0;
+        const intervalTime = 5000; // Interval time in milliseconds
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.classList.remove('inactive');
+                    console.log(`Showing slide ${i}`);
+                } else {
+                    slide.classList.remove('active');
+                    slide.classList.add('inactive');
+                    console.log(`Hiding slide ${i}`);
+                }
+            });
         }
-    });
 
-    function nextSlide() {
-        index++;
-        if (index === slides.length) {
-            index = 0;
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            console.log(`Next slide index: ${currentIndex}`);
+            showSlide(currentIndex);
         }
-        slider.style.transform = `translateY(-${slides[index].offsetTop}px)`;
-    }
 
-    setInterval(nextSlide, 5000);
-}
-
-function desktopInitializeSlider() {
-    const slides = document.querySelectorAll('.slide4');
-    let currentIndex = 0;
-    const intervalTime = 5000; // Interval time in milliseconds
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-                slide.classList.remove('inactive');
-                console.log(`Showing slide ${i}`);
-            } else {
-                slide.classList.remove('active');
-                slide.classList.add('inactive');
-                console.log(`Hiding slide ${i}`);
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        console.log(`Next slide index: ${currentIndex}`);
+        // Initial setup
         showSlide(currentIndex);
+
+        // Start the loop
+        setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
     }
 
-    // Initial setup
-    showSlide(currentIndex);
+    function desktopInitializeSlider7() {
+        const slides = document.querySelectorAll('.slide7');
+        let currentIndex = 0;
+        const intervalTime = 5000; // Interval time in milliseconds
 
-    // Start the loop
-    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.classList.remove('inactive');
+                    console.log(`Showing slide ${i}`);
+                } else {
+                    slide.classList.remove('active');
+                    slide.classList.add('inactive');
+                    console.log(`Hiding slide ${i}`);
+                }
+            });
+        }
 
-function desktopInitializeSlider7() {
-    const slides = document.querySelectorAll('.slide7');
-    let currentIndex = 0;
-    const intervalTime = 5000; // Interval time in milliseconds
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            console.log(`Next slide index: ${currentIndex}`);
+            showSlide(currentIndex);
+        }
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-                slide.classList.remove('inactive');
-                console.log(`Showing slide ${i}`);
-            } else {
-                slide.classList.remove('active');
-                slide.classList.add('inactive');
-                console.log(`Hiding slide ${i}`);
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        console.log(`Next slide index: ${currentIndex}`);
+        // Initial setup
         showSlide(currentIndex);
+
+        // Start the loop
+        setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
     }
 
-    // Initial setup
-    showSlide(currentIndex);
+    function desktopInitializeSlider2Page7() {
+        const slides = document.querySelectorAll('.slide7-2');
+        let currentIndex = 0;
+        const intervalTime = 10000; // Interval time in milliseconds
 
-    // Start the loop
-    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.classList.remove('inactive');
+                    console.log(`Showing slide ${i}`);
+                } else {
+                    slide.classList.remove('active');
+                    slide.classList.add('inactive');
+                    console.log(`Hiding slide ${i}`);
+                }
+            });
+        }
 
-function desktopInitializeSlider2Page7() {
-    const slides = document.querySelectorAll('.slide7-2');
-    let currentIndex = 0;
-    const intervalTime = 10000; // Interval time in milliseconds
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            console.log(`Next slide index: ${currentIndex}`);
+            showSlide(currentIndex);
+        }
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-                slide.classList.remove('inactive');
-                console.log(`Showing slide ${i}`);
-            } else {
-                slide.classList.remove('active');
-                slide.classList.add('inactive');
-                console.log(`Hiding slide ${i}`);
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        console.log(`Next slide index: ${currentIndex}`);
+        // Initial setup
         showSlide(currentIndex);
+
+        // Start the loop
+        setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
     }
 
-    // Initial setup
-    showSlide(currentIndex);
+    function desktopInitializeSlider3Page7() {
+        const slides = document.querySelectorAll('.slide7-3');
+        let currentIndex = 0;
+        const intervalTime = 5000; // Interval time in milliseconds
 
-    // Start the loop
-    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.classList.remove('inactive');
+                    console.log(`Showing slide ${i}`);
+                } else {
+                    slide.classList.remove('active');
+                    slide.classList.add('inactive');
+                    console.log(`Hiding slide ${i}`);
+                }
+            });
+        }
 
-function desktopInitializeSlider3Page7() {
-    const slides = document.querySelectorAll('.slide7-3');
-    let currentIndex = 0;
-    const intervalTime = 5000; // Interval time in milliseconds
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            console.log(`Next slide index: ${currentIndex}`);
+            showSlide(currentIndex);
+        }
 
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            if (i === index) {
-                slide.classList.add('active');
-                slide.classList.remove('inactive');
-                console.log(`Showing slide ${i}`);
-            } else {
-                slide.classList.remove('active');
-                slide.classList.add('inactive');
-                console.log(`Hiding slide ${i}`);
-            }
-        });
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        console.log(`Next slide index: ${currentIndex}`);
+        // Initial setup
         showSlide(currentIndex);
+
+        // Start the loop
+        setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
     }
 
-    // Initial setup
-    showSlide(currentIndex);
+    document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOM fully loaded");
 
-    // Start the loop
-    setInterval(nextSlide, intervalTime); // Change image every intervalTime milliseconds
-}
 
-// Ensure the code runs only when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("DOM fully loaded");
 
-    if (isDesktop()) {
-        console.log("Device is desktop");
+        if (isDesktop()) {
+            console.log("Device is desktop");
 
-        // Initialize desktop-specific functions for page2
-        // desktopFixedHeaderFunction();
-        desktopSliderFunction();
-        desktopInitializeSlider();
-        desktopInitializeSlider7();
-        desktopInitializeSlider2Page7();
-        desktopInitializeSlider3Page7();
+            // Initialize desktop-specific functions
+
+            desktopSliderFunction();
+            desktopInitializeSlider();
+            desktopInitializeSlider7();
+            desktopInitializeSlider2Page7();
+            desktopInitializeSlider3Page7();
+
+
     } else {
         console.log("Device is not desktop");
     }
-});
+
+    });
+
 
 
 

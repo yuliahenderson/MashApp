@@ -57,16 +57,19 @@ body {
 
   #fixedHeader {
 
-/*  background-color: transparent;
+  background-color: transparent;
   width: 100%;
-  height: 8%;
+  height: 15%;
   position: fixed;
-  z-index: 1000;*/
+  z-index: 1000;
+  scroll-snap-align: start;
 
-  /*border-bottom: 1px #F4F4F4;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;*/
 }
 
+header {
+  width: 100%;
+  height: 1%;
+}
 h1 {
   font-family: GT America;
 
@@ -87,7 +90,7 @@ nav ul {
     margin: 0;
     font-family: Helvetica;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 24px;
     letter-spacing: 2px;
 }
@@ -105,6 +108,67 @@ nav ul li a {
     color: #ffffff; /* Adjust link color */
     text-decoration: none; /* Remove underline from links */
     font-size: 14px; /* Adjust font size */
+}
+
+nav.black-font {
+    display: block;
+    position: absolute;
+    left: 78%; /* Adjust left position as needed */
+    margin-top: 3%; /* Adjust top margin as needed */
+
+}
+
+nav.black-font ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+nav.black-font ul li {
+    display: inline;
+    margin-right: 20px; /* Adjust spacing between navigation items */
+}
+
+nav.black-font ul li:last-child {
+    margin-right: 0; /* Remove right margin for the last navigation item */
+}
+
+nav.black-font ul li a {
+    color: #000000; /* Adjust link color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 11px; /* Adjust font size */
+}
+
+#scrollButton-black {
+  width: 89px;
+  height: 25px;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  align-items: center;
+  border-radius: 12.5px;
+  position: absolute;
+  left: 88%;
+  margin-top: 3%;
+  margin-left: 2%;
+
+}
+
+button span.text {
+  font-size: 11px;
+  line-height: 24px;
+  font-family: Helvetica;
+  font-weight: 500;
+  letter-spacing: 2px;
+  padding: 2px;
 }
 .heading1 {
   color: #FFFFFF;
@@ -135,7 +199,6 @@ p1, p2 {
   font-family: Helvetica;
   font-weight: 400;
   line-height: 24px;
-/*  padding: 0 8% 5% 8%;*/
   text-align: left;
   word-spacing: 0.1em;
   letter-spacing: -0.3px;
@@ -219,30 +282,21 @@ p6 {
   scroll-snap-align: start;
 
 }
+
 .one {
   width: 100vw;
   max-width: 100%;
-/*  width: 390px;*/
   height: 100vh;
   overflow: scroll; /* Hide any overflow content */
   display: flex; /* Use flexbox to center the image */
   justify-content: center; /* Center the image horizontally */
-/*  width: 100%;
-  height: 85%;
-  margin-top: 0;
-  overflow: hidden;*/
-/*  display: flex;
-  flex-direction: column;
-}*/
 }
+
 .two {
   width: 100%;
   position: absolute;
   bottom: 8%;
   text-align: center;
-/*  margin-top: 5%;*/
-/*  display: flex;
-  flex-direction: column;*/
 }
 
 #m-logo {
@@ -255,9 +309,7 @@ p6 {
   position: absolute;
   left: 9%;
   margin-top: 3.5%;
-
 }
-
 
 
  #scrollButton{
@@ -270,7 +322,6 @@ p6 {
   font-size: 14px;
   font-family: Helvetica;
   font-weight: 500;
-/*  line-height: 24px;*/
   letter-spacing: 2px;
   align-items: center;
   width: 10%;
@@ -290,23 +341,9 @@ p6 {
   height: 100vh;
   overflow: hidden; /* Hide any overflow content */
   display: flex; /* Use flexbox to center the image */
-  justify-content: center; /*
-  width: 390px;
-  height: 65%;
-/*  width: 100%;
-  max-width: 390px;
-  height: 60%;*/
-
+  justify-content: center;
   position: absolute;
- /* max-height: 85%;
-  object-fit: contain;*/
-/*  display: flex;
-  flex-direction: column;*/
   top: 0;
-/*  width: 100%;
-  height: 100vh;*/
-  /*background-size: cover;
-  background-repeat: no-repeat;*/
   background-position: center;
   z-index: -18;
   opacity: 0;
@@ -368,66 +405,11 @@ section .img-8, section .img-9, section .img-10, section
 
 .content-wrapper {
     height: 100vh;
-/*    margin: 8% 20% 8% 20%;*/
-/*    margin-left: 20%;*/
     display: flex;
     align-items: center; /* Vertically center the items */
 }
 
-/*.container-phone {
-    position: relative;
-    width: 344px;
-    height: 590px;
-    overflow: hidden;
-    border-radius: 30px;
-    z-index: 0;
-    }
 
-  .container-phone::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(Images/iphone-frame.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 30px;
-    overflow: hidden;
-    z-index: 1;
-    }
-
-    .slider {
-
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
-        transition: transform 0.5s ease;
-        border-radius: 50px;
-        overflow: hidden;
-
-    }
-
-    .slide {
-        min-width: 100%;
-        height: 580px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 30px;
-
-
-    }
-
-    .slide img {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 30px;
-    }*/
 
 /* Styles for the iPhone frame */
 .iphone-frame {
@@ -439,7 +421,6 @@ section .img-8, section .img-9, section .img-10, section
     position: relative;
     overflow: hidden; /* Hide overflow */
     z-index: 1;
-/*    margin: 0 10%;*/
 }
 
 .iphone-frame::before {
@@ -495,12 +476,15 @@ section .img-8, section .img-9, section .img-10, section
 }
 
 .page2-text {
-  width: 25%;
+  width: 30%;
   margin-left: 10%;
-  margin-right: 5%;
+/*  margin-right: 5%;*/
   text-align: left;
 }
 
+.page2-main {
+  margin: 4%;
+}
 .heading2 {
   font-family: GT America;
   padding: 5% 5% 5% 0;
@@ -542,11 +526,12 @@ section .img-8, section .img-9, section .img-10, section
 }
 .page4-main {
   width: 22%;
+  margin: 4%;
 }
 .page4-text {
-  width: 25%;
+  width: 30%;
   margin-left: 10%;
-  margin-right: 5%;
+/*  margin-right: 5%;*/
   text-align: left;
 }
 
@@ -599,7 +584,7 @@ section .img-8, section .img-9, section .img-10, section
 }
 
 .page5-text {
-  width: 35%;
+  width: 30%;
   text-align: left;
   margin-left: 5%;
 }
@@ -618,10 +603,10 @@ section .img-8, section .img-9, section .img-10, section
 .page6-text {
   width: 30%;
   text-align: left;
-  margin-left: 18%;
+  margin-left: 10%;
 }
 .page6-main {
-  margin: 5%;
+  margin: 4%;
   width: 22%;
 }
 
@@ -758,17 +743,14 @@ section .img-8, section .img-9, section .img-10, section
 }
 
 .page8-text {
-  width: 25%;
+  width: 30%;
   text-align: left;
-  margin-left: 20%;
+  margin-left: 10%;
 }
 
 .page8-main {
-  margin-left: 5%;
+  margin: 4%;
   width: 24%;
- /* border: 1px solid;
-  border-color: #6e6d6b;*/
-
 }
 
 .page9-main {
@@ -776,10 +758,6 @@ section .img-8, section .img-9, section .img-10, section
 
 }
 
-/*.content-wrapper2 {
-  display: flex;
-  flex-direction: column;
-}*/
 
 .page9-text {
   width: 30%;
@@ -878,7 +856,6 @@ section .img-8, section .img-9, section .img-10, section
 .page11-header {
     position: relative;
     width: 100%;
-/*    margin-bottom: 5%;*/
 }
 
 .page11-main {
@@ -901,15 +878,6 @@ section .img-8, section .img-9, section .img-10, section
   text-align: center;
 }
 
-/*.page11-title {
-    position: absolute;
-    font-size: 24px;
-    font-family: GT America;
-    font-weight: 700;
-    width: 60%;
-    top: 20%;
-    padding: 10px;
-}*/
 
 .question1 {
   display: flex;
@@ -932,7 +900,6 @@ section .img-8, section .img-9, section .img-10, section
 .question2 {
   display: flex;
   margin-bottom: 2%;
-/*  padding: 5% 5% 5% 0;*/
 }
 .q-2 {
   float: left;
@@ -954,7 +921,6 @@ section .img-8, section .img-9, section .img-10, section
 .question4 {
   display: flex;
   margin-bottom: 2%;
-/*  padding: 5% 5% 5% 0;*/
 }
 .q-4 {
   float: left;
@@ -1021,8 +987,8 @@ footer {
   padding: 3%;
 }
 
-}
 
+}
 
 
 
@@ -1372,39 +1338,6 @@ section .img-8, section .img-9, section .img-10, section
 }
 
 
-/*.header {
-  display: flex;
-  justify-content: center;
-  margin-top: 3%;
-  padding: 5%;
-}*/
-
-/*.logo_black {
-
-  display: inline-block;
-
-}
-
- .second-button {
-  display: inline-block;
-  background-color: #000000;
-  color: #FFFFFF;
-  border: none;
-  text-align: center;
-  text-decoration: none;
-  font-size: 11px;
-  font-family: Helvetica Neue;
-  font-weight: 500;
-  width: 100px;
-  height: 30px;
-  border-radius: 12.5px;
-  margin-top: 1%;
-}*/
-
-
-
-
-
 
  .pages .page2 {
 
@@ -1419,27 +1352,6 @@ section .img-8, section .img-9, section .img-10, section
   align-content: center;
   padding: 5%;
 }
-/*.iphone-frame {
-  width: 50%;
-  margin: 24% 25% 2% 25%;
-
-}*/
-
-
-/* .big-button {
-   color: black;
-   background-color: #FFFFFF;
-   border: 1px solid #6D6D6D;
-   text-align: center;
-   text-decoration: none;
-   font-size: 17px;
-   font-family: GT America;
-   font-weight: 500;
-   width: 360px;
-   height: 50px;
-   border-radius: 15px;
-   margin: 3%;
- }*/
 
 /* Styles for the iPhone frame */
 .iphone-frame {
@@ -1506,49 +1418,7 @@ section .img-8, section .img-9, section .img-10, section
     object-fit: cover; /* Ensure images fill the slide without stretching */
 }
 
-/*    .container-phone {
-    position: relative;
-    width: 54%;
-    height: 461px;
-    overflow: hidden;
-    margin: 5% 23% 8% 23%;
-    border-radius: 32px;
-    }
 
-    .slider {
-        width: 100%;
-        position: absolute;
-        transition: transform 0.5s ease;
-        border-radius: 50px;
-    }
-
-    .slide {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50px;
-
-    }
-
-    .slide img {
-        width: 100%;
-        height: 460px;
-        margin-left: 2%;
-        margin-right: 2%;
-        margin-top: 1%;
-    }
-
-    .iphone-frame {
-        position: absolute;
-        top: 0;
-        width: 66%;
-        height: 500px;
-        z-index: 1;
-        margin: 0 17% 0 17%;
-    }
-*/
 .page3-header {
     position: relative;
     width: 100%;
@@ -1575,12 +1445,6 @@ section .img-8, section .img-9, section .img-10, section
 
 }
 
-/*.page3-header {
-  width: 100%;
-  height: 30%;
-  background-image: url(Images/Vector.png);
-  background-size: 100% 100%;
-  background-position: center; /* Position the background image in the center */
 
 
 .page3-main {
@@ -1588,15 +1452,9 @@ section .img-8, section .img-9, section .img-10, section
   width: 70%;
 }
 
-/*.page3-text {
 
-    text-align: justify;
-    margin: 8%;
-}*/
 .page4-header {
-/*  width: 100%;*/
-/*  height: 74px;
-  margin: 5%;*/
+
     position: relative;
     width: 100%;
     margin-bottom: 5%;
@@ -1663,62 +1521,7 @@ section .img-8, section .img-9, section .img-10, section
  margin-top: 10%;
 }
 
-/*.img1-page4, .img2-page4 {
-  position: absolute;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -18;
-  opacity: 0;
-  animation-name: fade;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
 
-}*/
-
-/*section .img1-page4, section .img2-page4 {
-  opacity: 1;
-  animation-name: iris;
-  animation-duration: 8s;
-  animation-iteration-count: infinite;
-}
-
-.img1-page4 { animation-delay: 0s; }
-.img2-page4 { animation-delay: 4s; }
-*/
-
-
-/* Banner Animations (4s per image, 16s total timeline)
-/*---------------------------------------------*/
-
-/*@keyframes crossfade {
-
-  00.00%  { opacity: 0; }
-  06.25%  { opacity: 1; }
-  25.00%  { opacity: 1; }
-  31.25%  { opacity: 0; }b
-  100.0%  { opacity: 0; }
-}
-
-@keyframes fade {
-
-  00.00%  { opacity: 0; z-index: -10; }
-  06.25%  { opacity: 1; z-index: -10; }
-  31.25%  { opacity: 1; z-index: -12; }
-  37.50%  { opacity: 0; z-index: -14; }
-  100.0%  { opacity: 0; z-index: -16; }
-}*/
-
-/* Animating a clip-path in Google Chrome can destroy performance...it's crazy CPU intensive */
-/*@keyframes iris {
-  00.0% { clip-path: circle(0% at 50% 0%); z-index: -10; }
-  12.5% { clip-path: circle(120% at 50% 0%); z-index: -10; }
-  31.25%  { clip-path: circle(120% at 50% 0%); z-index: -12; }
-  37.50%  { clip-path: circle(0% at 50% 0%); z-index: -14; }
-  100%  { clip-path: circle(0% at 50% 0%); z-index: -16; }
-}
-*/
 
 .page5-header {
   position: relative;
@@ -1759,11 +1562,7 @@ section .img-8, section .img-9, section .img-10, section
 }
 .img1-page7, .img2-page7, .img3-page7, .img4-page7 {
   position: absolute;
-/*  display: flex;
-  flex-direction: column;*/
   top: 0;
-/*  width: 100%;
-  height: 100%;*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1850,8 +1649,6 @@ section .img1-page7, section .img2-page7, section .img3-page7, section .img4-pag
   letter-spacing: -0.25px;
   padding-top: 10% ;
   padding-bottom: 0;
-
-/*  padding: 10px;*/
   margin-left: 7%;
   text-align: left;
 }
