@@ -123,7 +123,7 @@ function mobileFixedHeaderFunction() {
             button.style.backgroundColor = '#000000';
             mlogo.src = 'Images/logo_black.png';
             mlogo.style.width = '45px';
-            mlogo.style.height = '36px';
+            mlogo.style.height = '27px';
             nav.style.display = 'block';
             logo.style.display = 'none';
         } else {
