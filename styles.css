@@ -984,9 +984,8 @@ footer {
 
 }
 .social {
-  padding: 3%;
+  padding: 1%;
 }
-
 
 }
 
@@ -1191,7 +1190,7 @@ p6 {
 #logo {
   position: absolute;
   left: 40%;
- margin-top: 7%;
+  margin-top: 7%;
 
 }
 
@@ -1867,4 +1866,9 @@ footer {
 .social {
   padding: 5%;
 }
+
+/*.padded-image {
+  padding-top: 1.5%;
+}*/
+
 }
