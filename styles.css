@@ -1551,43 +1551,40 @@ section .img-8, section .img-9, section .img-10, section
 
 }
 
-
 .slider-page4 {
-  width: 100%; /* Set your desired width */
-  height: 560px; /* Set your desired height */
-  position: relative;
-  perspective: 1000px; /* Perspective for 3D effect */
-}
+            position: relative;
+            width: 100%;
+            height: 570px; /* Ensure the slider takes the full height of the viewport */
+            overflow: hidden;
 
-.slide4-mobile {
+        }
 
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transform-style: preserve-3d;
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
-}
+        .slider-page4 .slide-container {
+            position: absolute;
+            width: 100%;
+            height: 100%; /* Ensure each container takes the full height of the slider */
+            top: 0;
+            left: 100%; /* Start all slides off-screen to the right */
+            transition: left 1s ease;
+        }
 
-.slide4-mobile.active {
+        .slider-page4 .slide-container.active {
+            left: 0; /* The active slide should be visible */
+        }
 
-  opacity: 1;
-  transform: rotateY(0deg); /* Rotate to show front face */
-}
+        .slider-page4 .slide-container.inactive-left {
+            left: -100%; /* The previous slide moves off-screen to the left */
+        }
 
-.slide4-mobile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  backface-visibility: hidden; /* Hide the back face of the image */
-}
+        .slider-page4 .slide-container.inactive-right {
+            left: 100%; /* The next slide moves in from the right */
+        }
 
-.slide4-mobile.inactive {
-
-  transform: rotateY(180deg); /* Rotate to show back face */
-}
+        .slide-container img {
+            width: 100%;
+            height: 100%; /* Ensure the image takes the full height of the container */
+            object-fit: cover;
+        }
 
 .page4-text {
  margin-top: 10%;
