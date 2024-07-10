@@ -1,4 +1,4 @@
-// Utility functions
+ // Utility functions
 function isDesktop() {
     return window.matchMedia("(min-width: 993px)").matches;
 }
@@ -68,21 +68,59 @@ function desktopSliderFunction() {
     setInterval(nextSlide, 5000);
 }
 
-// Generic slider initialization function
-function initializeSlider(selector, intervalTime = 5000) {
-    console.log(`initializeSlider called with selector: ${selector}`);
+// New desktop-specific carousel function
+function desktopCarouselFunction() {
+    console.log('desktopCarouselFunction called');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const items = document.querySelectorAll('.coverflow__item');
+        items.forEach((item, index) => {
+            item.classList.remove('coverflow__item--active');
+            item.style.transform = `translateX(${(index - currentIndex) * 15}px) scale(0.99)`; // Apply initial scale to all items
+            if (index === currentIndex) {
+                item.classList.add('coverflow__item--active');
+                item.style.transform = `translateX(${(index - currentIndex) * 15}px) scale(1.1)`; // Scale active item
+            }
+        });
+    }
+
+    function nextSlide1() {
+        const items = document.querySelectorAll('.coverflow__item');
+        currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    }
+
+    // Initialize the carousel and set interval
+    updateCarousel();
+    setInterval(nextSlide1, 5000);
+}
+
+// New slider function for slider-page4
+function createSlider(selector, intervalTime = 5000) {
+    console.log(`createSlider called with selector: ${selector}`);
     const slides = document.querySelectorAll(selector);
     let currentIndex = 0;
 
-    if (slides.length === 0) {
-        console.error(`No slides found for selector: ${selector}`);
+    if (slides.length < 2) {
+        console.error(`At least 2 slides are required for the slider to work.`);
         return;
     }
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-            slide.classList.toggle('inactive', i !== index);
+            if (i === index) {
+                slide.classList.add('active');
+                slide.classList.remove('inactive-left');
+                slide.classList.remove('inactive-right');
+            } else {
+                slide.classList.remove('active');
+                if (i < index) {
+                    slide.classList.add('inactive-left');
+                } else {
+                    slide.classList.add('inactive-right');
+                }
+            }
         });
     }
 
@@ -91,6 +129,7 @@ function initializeSlider(selector, intervalTime = 5000) {
         showSlide(currentIndex);
     }
 
+    // Initialize the carousel and set interval
     showSlide(currentIndex);
     setInterval(nextSlide, intervalTime);
 }
@@ -139,6 +178,90 @@ function mobileFixedHeaderFunction() {
     changeColorsAndLogo();
     window.addEventListener('scroll', changeColorsAndLogo);
 }
+
+// Function to initialize fixed header for desktop
+function desktopFixedHeaderFunction() {
+    const header = document.getElementById('fixedHeader');
+    const mlogo = document.querySelector('.desktop-only #mlogo');
+    const button = document.querySelector('.desktop-only #scrollButton');
+    const nav = document.querySelector('.desktop-only nav');
+    const logo = document.querySelector('.desktop-only #logo');
+    const originalLogoSrc = mlogo.src;
+
+    const pagesToObserve = ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9'];
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Adjust as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (entry.target.id === 'page7') {
+                    header.style.display = 'none';
+                } else if (entry.target.id === 'page1') {
+                    header.style.display = 'block';
+                    // Reset header to default
+                    button.style.color = '#000000';
+                    button.style.backgroundColor = '#ffffff';
+                    mlogo.src = originalLogoSrc;
+                    mlogo.style.width = ''; // Reset to default
+                    mlogo.style.height = ''; // Reset to default
+                    logo.style.display = 'block';
+
+                    // Reset nav links to default
+                    const navLinks = document.querySelectorAll('.desktop-only nav ul li a');
+                    navLinks.forEach(link => {
+                        link.style.color = ''; // Reset to default
+                        link.style.fontSize = ''; // Reset to default
+                        link.style.fontWeight = ''; // Reset to default
+                    });
+                } else if (pagesToObserve.includes(entry.target.id)) {
+                    header.style.display = 'block';
+                    // Uncomment to change the header background color
+                    // header.style.backgroundColor = '#ffffff';
+                    button.style.color = '#ffffff';
+                    button.style.backgroundColor = '#000000';
+                    mlogo.src = 'Images/logo_black.png';
+                    mlogo.style.width = '45px';
+                    mlogo.style.height = '27px';
+                    logo.style.display = 'none';
+
+                    // Change nav links to black, font size to 11px, and font weight to 500
+                    const navLinks = document.querySelectorAll('.desktop-only nav ul li a');
+                    navLinks.forEach(link => {
+                        link.style.color = '#000000';
+                        link.style.fontSize = '11px';
+                        link.style.fontWeight = '500';
+                    });
+                }
+            }
+        });
+    }, observerOptions);
+
+    pagesToObserve.forEach(pageId => {
+        const page = document.getElementById(pageId);
+        if (page) {
+            observer.observe(page);
+        } else {
+            console.error(`Element with id ${pageId} not found.`);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (isDesktop()) {
+        desktopFixedHeaderFunction();
+    }
+});
+
+
+
+
+
+
 
 // Function to handle theme color meta change for mobile
 function mobileThemeColorMetaFunction() {
@@ -296,10 +419,13 @@ function initializeCollapsibles() {
 function initializeDesktopFunctions() {
     console.log('Initializing desktop functions');
     desktopSliderFunction();
-    initializeSlider('.desktop-only .slide4');
-    initializeSlider('.desktop-only .slide7');
-    initializeSlider('.desktop-only .slide7-2', 10000);
-    initializeSlider('.desktop-only .slide7-3');
+    desktopCarouselFunction(); // Incorporate the new desktop-specific carousel function
+    desktopFixedHeaderFunction();
+    createSlider('.desktop-only .slider-page4 .slide-container');
+    // initializeSlider('.desktop-only .slide4');
+    // initializeSlider('.desktop-only .slide7');
+    // initializeSlider('.desktop-only .slide7-2', 10000);
+    // initializeSlider('.desktop-only .slide7-3');
 }
 
 // Function to initialize all mobile-specific functionalities
@@ -311,7 +437,8 @@ function initializeMobileFunctions() {
     mobileFixedHeaderGreenFunction();
     mobileFixedHeaderGreyFunction();
     mobileFixedHeaderBlueFunction();
-    initializeSlider('.mobile-only .slide4-mobile');
+    createSlider('.mobile-only .slider-page4 .slide-container');
+    // initializeSlider('.mobile-only .slide4-mobile');
 }
 
 // Ensure the code runs only when the DOM is fully loaded
@@ -323,4 +450,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     initializeCollapsibles();
 });
-

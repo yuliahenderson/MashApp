@@ -61,8 +61,9 @@ body {
   width: 100%;
   height: 15%;
   position: fixed;
-  z-index: 1000;
+/*  z-index: 1000;*/
   scroll-snap-align: start;
+  z-index: 10;
 
 }
 
@@ -70,6 +71,7 @@ header {
   width: 100%;
   height: 1%;
 }
+
 h1 {
   font-family: GT America;
 
@@ -546,12 +548,46 @@ section .img-8, section .img-9, section .img-10, section
 
 }
 
-
 .slider-page4 {
-  width: 100%; /* Set your desired width */
-  height: 560px; /* Set your desired height */
+            position: relative;
+            width: 100%;
+            height: 560px; /* Ensure the slider takes the full height of the viewport */
+            overflow: hidden;
+
+        }
+
+        .slider-page4 .slide-container {
+            position: absolute;
+            width: 100%;
+            height: 100%; /* Ensure each container takes the full height of the slider */
+            top: 0;
+            left: 100%; /* Start all slides off-screen to the right */
+            transition: left 1s ease;
+        }
+
+        .slider-page4 .slide-container.active {
+            left: 0; /* The active slide should be visible */
+        }
+
+        .slider-page4 .slide-container.inactive-left {
+            left: -100%; /* The previous slide moves off-screen to the left */
+        }
+
+        .slider-page4 .slide-container.inactive-right {
+            left: 100%; /* The next slide moves in from the right */
+        }
+
+        .slide-container img {
+            width: 100%;
+            height: 100%; /* Ensure the image takes the full height of the container */
+            object-fit: cover;
+        }
+
+/*.slider-page4 {
+  width: 100%;
+  height: 560px;
   position: relative;
-  perspective: 1000px; /* Perspective for 3D effect */
+  perspective: 1000px;
 }
 
 .slide4 {
@@ -563,26 +599,26 @@ section .img-8, section .img-9, section .img-10, section
   left: 0;
   opacity: 0;
   transform-style: preserve-3d;
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .slide4.active {
 
   opacity: 1;
-  transform: rotateY(0deg); /* Rotate to show front face */
+  transform: rotateY(0deg);
 }
 
 .slide4 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  backface-visibility: hidden; /* Hide the back face of the image */
+  backface-visibility: hidden;
 }
 
 .slide4.inactive {
 
-  transform: rotateY(180deg); /* Rotate to show back face */
-}
+  transform: rotateY(180deg);
+}*/
 
 .page5-text {
   width: 30%;
@@ -611,11 +647,12 @@ section .img-8, section .img-9, section .img-10, section
   width: 22%;
 }
 
-.slider-page7 {
-  width: 100%; /* Set your desired width */
-  height: 100%; /* Set your desired height */
+
+/*.slider-page7 {
+  width: 100%;
+  height: 100%;
   position: relative;
-  perspective: 1000px; /* Perspective for 3D effect */
+  perspective: 1000px;
 }
 
 .slide7 {
@@ -627,32 +664,32 @@ section .img-8, section .img-9, section .img-10, section
   left: 0;
   opacity: 0;
   transform-style: preserve-3d;
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .slide7.active {
 
   opacity: 1;
-  transform: rotateY(0deg); /* Rotate to show front face */
+  transform: rotateY(0deg);
 }
 
 .slide7 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  backface-visibility: hidden; /* Hide the back face of the image */
+  backface-visibility: hidden;
 }
 
 .slide7.inactive {
 
-  transform: rotateY(180deg); /* Rotate to show back face */
+  transform: rotateY(180deg);
 }
 
 .slider2-page7 {
-  width: 100%; /* Set your desired width */
-  height: 100%; /* Set your desired height */
+  width: 100%;
+  height: 100%;
   position: relative;
-  perspective: 1000px; /* Perspective for 3D effect */
+  perspective: 1000px;
 }
 
 .slide7-2 {
@@ -664,32 +701,32 @@ section .img-8, section .img-9, section .img-10, section
   left: 0;
   opacity: 0;
   transform-style: preserve-3d;
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .slide7-2.active {
 
   opacity: 1;
-  transform: rotateY(0deg); /* Rotate to show front face */
+  transform: rotateY(0deg);
 }
 
 .slide7-2 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  backface-visibility: hidden; /* Hide the back face of the image */
+  backface-visibility: hidden;
 }
 
 .slide7-2.inactive {
 
-  transform: rotateY(180deg); /* Rotate to show back face */
+  transform: rotateY(180deg);
 }
 
 .slider3-page7 {
-  width: 100%; /* Set your desired width */
-  height: 100%; /* Set your desired height */
+  width: 100%;
+  height: 100%;
   position: relative;
-  perspective: 1000px; /* Perspective for 3D effect */
+  perspective: 1000px;
 }
 
 .slide7-3 {
@@ -701,25 +738,25 @@ section .img-8, section .img-9, section .img-10, section
   left: 0;
   opacity: 0;
   transform-style: preserve-3d;
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition */
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .slide7-3.active {
 
   opacity: 1;
-  transform: rotateY(0deg); /* Rotate to show front face */
+  transform: rotateY(0deg);
 }
 
 .slide7-3 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  backface-visibility: hidden; /* Hide the back face of the image */
+  backface-visibility: hidden;
 }
 
 .slide7-3.inactive {
 
-  transform: rotateY(180deg); /* Rotate to show back face */
+  transform: rotateY(180deg);
 }
 
 
@@ -741,7 +778,42 @@ section .img-8, section .img-9, section .img-10, section
   height: 100%;
   margin-right: 3%;
   margin-left: 1%;
+}*/
+
+.coverflow {
+  position: relative;
+  width: 100%;
+/*  max-width: 800px;
+  perspective: 1000px;*/
 }
+
+.coverflow__carousel {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+
+.coverflow__item {
+  width: 320px;
+  margin: 0 5px;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0.5;
+  transform: scale(0.8);
+}
+
+.coverflow__item img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.coverflow__item--active {
+  opacity: 1;
+  transform: scale(0.9);
+}
+
 
 .page8-text {
   width: 30%;
