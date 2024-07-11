@@ -183,7 +183,7 @@ function mobileFixedHeaderFunction() {
 function desktopFixedHeaderFunction() {
     const header = document.getElementById('fixedHeader');
     const mlogo = document.querySelector('.desktop-only #mlogo');
-    const button = document.querySelector('.desktop-only #scrollButton');
+    const scrollButtonBlack = document.getElementById('scrollButton-black');
     const nav = document.querySelector('.desktop-only nav');
     const logo = document.querySelector('.desktop-only #logo');
     const originalLogoSrc = mlogo.src;
@@ -203,9 +203,8 @@ function desktopFixedHeaderFunction() {
                     header.style.display = 'none';
                 } else if (entry.target.id === 'page1') {
                     header.style.display = 'block';
+                    scrollButtonBlack.style.display = 'none'; // Hide the black button on page1
                     // Reset header to default
-                    button.style.color = '#000000';
-                    button.style.backgroundColor = '#ffffff';
                     mlogo.src = originalLogoSrc;
                     mlogo.style.width = ''; // Reset to default
                     mlogo.style.height = ''; // Reset to default
@@ -218,12 +217,14 @@ function desktopFixedHeaderFunction() {
                         link.style.fontSize = ''; // Reset to default
                         link.style.fontWeight = ''; // Reset to default
                     });
-                } else if (pagesToObserve.includes(entry.target.id)) {
+
+                    // Reset nav position
+                    nav.style.left = ''; // Reset to default
+                } else if (['page2', 'page3', 'page4', 'page5', 'page6', 'page8', 'page9'].includes(entry.target.id)) {
                     header.style.display = 'block';
+                    scrollButtonBlack.style.display = 'block'; // Show the black button on these pages
                     // Uncomment to change the header background color
                     // header.style.backgroundColor = '#ffffff';
-                    button.style.color = '#ffffff';
-                    button.style.backgroundColor = '#000000';
                     mlogo.src = 'Images/logo_black.png';
                     mlogo.style.width = '45px';
                     mlogo.style.height = '27px';
@@ -236,6 +237,9 @@ function desktopFixedHeaderFunction() {
                         link.style.fontSize = '11px';
                         link.style.fontWeight = '500';
                     });
+
+                    // Change nav position
+                    nav.style.left = '79%'; // Set to 79% on specific pages
                 }
             }
         });
@@ -256,6 +260,10 @@ document.addEventListener("DOMContentLoaded", function () {
         desktopFixedHeaderFunction();
     }
 });
+
+
+
+
 
 
 
