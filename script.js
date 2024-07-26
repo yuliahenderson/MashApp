@@ -68,9 +68,96 @@ function desktopSliderFunction() {
     setInterval(nextSlide, 5000);
 }
 
+// Desktop-specific slider function
+function desktopSliderPage9Function() {
+    console.log('desktopSliderPage9Function called');
+    const slider = document.querySelector('.desktop-only .slider-wave');
+    const slides = document.querySelectorAll('.desktop-only .slide_page9');
+    let index = 0;
+
+    if (!slider || slides.length === 0) {
+        console.error('Desktop slider or slides not found for desktopSliderPage9Function');
+        return;
+    }
+
+    // Duplicate the first slide and append it to the end
+    const firstSlideClone = slides[0].cloneNode(true);
+    slider.appendChild(firstSlideClone);
+
+    // Ensure the slider's height accommodates all slides including the cloned one
+    slider.style.height = `${(slides.length + 1) * 100}%`;
+
+    // Set the height of each slide to be equal
+    const allSlides = document.querySelectorAll('.desktop-only .slide_page9');
+    allSlides.forEach(slide => {
+        slide.style.height = `${100 / (slides.length + 1)}%`;
+    });
+
+    function nextSlide() {
+        index++;
+        slider.style.transition = 'transform 0.5s ease-in-out'; // Smooth transition
+        slider.style.transform = `translateY(-${index * (100 / (slides.length + 1))}%)`;
+
+        // Reset to the first slide without transition when the last slide (cloned first slide) is reached
+        if (index === slides.length) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                slider.style.transform = 'translateY(0)';
+                index = 0;
+            }, 500); // Wait for the transition to complete
+        }
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+// Desktop-specific slider function
+function mobileSliderPage9Function() {
+    console.log('mobileSliderPage9Function called');
+    const slider = document.querySelector('.mobile-only .slider-wave');
+    const slides = document.querySelectorAll('.mobile-only .slide_page9');
+    let index = 0;
+
+    if (!slider || slides.length === 0) {
+        console.error('Mobile slider or slides not found for mobileSliderPage9Function');
+        return;
+    }
+
+    // Duplicate the first slide and append it to the end
+    const firstSlideClone = slides[0].cloneNode(true);
+    slider.appendChild(firstSlideClone);
+
+    // Ensure the slider's height accommodates all slides including the cloned one
+    slider.style.height = `${(slides.length + 1) * 100}%`;
+
+    // Set the height of each slide to be equal
+    const allSlides = document.querySelectorAll('.mobile-only .slide_page9');
+    allSlides.forEach(slide => {
+        slide.style.height = `${100 / (slides.length + 1)}%`;
+    });
+
+    function nextSlide() {
+        index++;
+        slider.style.transition = 'transform 0.5s ease-in-out'; // Smooth transition
+        slider.style.transform = `translateY(-${index * (100 / (slides.length + 1))}%)`;
+
+        // Reset to the first slide without transition when the last slide (cloned first slide) is reached
+        if (index === slides.length) {
+            setTimeout(() => {
+                slider.style.transition = 'none';
+                slider.style.transform = 'translateY(0)';
+                index = 0;
+            }, 500); // Wait for the transition to complete
+        }
+    }
+
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}
+
+
 // New desktop-specific carousel function
-function desktopCarouselFunction() {
-    console.log('desktopCarouselFunction called');
+function mobileCarouselFunction() {
+    console.log('mobileCarouselFunction called');
     let currentIndex = 0;
 
     function updateCarousel() {
@@ -430,6 +517,7 @@ function initializeDesktopFunctions() {
     desktopCarouselFunction(); // Incorporate the new desktop-specific carousel function
     desktopFixedHeaderFunction();
     createSlider('.desktop-only .slider-page4 .slide-container');
+    desktopSliderPage9Function();
     // initializeSlider('.desktop-only .slide4');
     // initializeSlider('.desktop-only .slide7');
     // initializeSlider('.desktop-only .slide7-2', 10000);
@@ -446,6 +534,7 @@ function initializeMobileFunctions() {
     mobileFixedHeaderGreyFunction();
     mobileFixedHeaderBlueFunction();
     createSlider('.mobile-only .slider-page4 .slide-container');
+    mobileSliderPage9Function()
     // initializeSlider('.mobile-only .slide4-mobile');
 }
 
