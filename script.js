@@ -1,4 +1,4 @@
- // Utility functions
+// Utility functions
 function isDesktop() {
     return window.matchMedia("(min-width: 993px)").matches;
 }
@@ -68,7 +68,7 @@ function desktopSliderFunction() {
     setInterval(nextSlide, 5000);
 }
 
-// Desktop-specific slider function
+// Desktop-specific slider function for page 9
 function desktopSliderPage9Function() {
     console.log('desktopSliderPage9Function called');
     const slider = document.querySelector('.desktop-only .slider-wave');
@@ -111,7 +111,7 @@ function desktopSliderPage9Function() {
     setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
 
-// Desktop-specific slider function
+// Mobile-specific slider function for page 9
 function mobileSliderPage9Function() {
     console.log('mobileSliderPage9Function called');
     const slider = document.querySelector('.mobile-only .slider-wave');
@@ -154,10 +154,9 @@ function mobileSliderPage9Function() {
     setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
 
-
 // New desktop-specific carousel function
-function mobileCarouselFunction() {
-    console.log('mobileCarouselFunction called');
+function desktopCarouselFunction() {
+    console.log('desktopCarouselFunction called');
     let currentIndex = 0;
 
     function updateCarousel() {
@@ -248,8 +247,8 @@ function mobileFixedHeaderFunction() {
             button.style.color = '#ffffff';
             button.style.backgroundColor = '#000000';
             mlogo.src = 'Images/logo_black.png';
-            mlogo.style.width = '45px';
-            mlogo.style.height = '27px';
+            mlogo.style.width = '2.8125rem'; /* 45px */
+            mlogo.style.height = '1.6875rem'; /* 27px */
             nav.style.display = 'block';
             logo.style.display = 'none';
         } else {
@@ -313,15 +312,15 @@ function desktopFixedHeaderFunction() {
                     // Uncomment to change the header background color
                     // header.style.backgroundColor = '#ffffff';
                     mlogo.src = 'Images/logo_black.png';
-                    mlogo.style.width = '45px';
-                    mlogo.style.height = '27px';
+                    mlogo.style.width = '2.8125rem'; /* 45px */
+                    mlogo.style.height = '1.6875rem'; /* 27px */
                     logo.style.display = 'none';
 
                     // Change nav links to black, font size to 11px, and font weight to 500
                     const navLinks = document.querySelectorAll('.desktop-only nav ul li a');
                     navLinks.forEach(link => {
                         link.style.color = '#000000';
-                        link.style.fontSize = '11px';
+                        link.style.fontSize = '0.6875rem'; /* 11px */
                         link.style.fontWeight = '500';
                     });
 
@@ -341,22 +340,6 @@ function desktopFixedHeaderFunction() {
         }
     });
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (isDesktop()) {
-        desktopFixedHeaderFunction();
-    }
-});
-
-
-
-
-
-
-
-
-
-
 
 // Function to handle theme color meta change for mobile
 function mobileThemeColorMetaFunction() {
@@ -534,7 +517,7 @@ function initializeMobileFunctions() {
     mobileFixedHeaderGreyFunction();
     mobileFixedHeaderBlueFunction();
     createSlider('.mobile-only .slider-page4 .slide-container');
-    mobileSliderPage9Function()
+    mobileSliderPage9Function();
     // initializeSlider('.mobile-only .slide4-mobile');
 }
 
@@ -547,3 +530,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     initializeCollapsibles();
 });
+
