@@ -288,6 +288,7 @@ function desktopFixedHeaderFunction() {
                 if (entry.target.id === 'page7') {
                     header.style.display = 'none';
                 } else if (entry.target.id === 'page1') {
+                    // If page1 is intersecting, reset everything to default
                     header.style.display = 'block';
                     scrollButtonBlack.style.display = 'none'; // Hide the black button on page1
                     // Reset header to default
@@ -306,6 +307,7 @@ function desktopFixedHeaderFunction() {
 
                     // Reset nav position
                     nav.style.left = ''; // Reset to default
+                    nav.style.right = ''; // Reset to default
                 } else if (['page2', 'page3', 'page4', 'page5', 'page6', 'page8', 'page9'].includes(entry.target.id)) {
                     header.style.display = 'block';
                     scrollButtonBlack.style.display = 'block'; // Show the black button on these pages
@@ -325,7 +327,7 @@ function desktopFixedHeaderFunction() {
                     });
 
                     // Change nav position
-                    nav.style.left = '79%'; // Set to 79% on specific pages
+                    nav.style.right = '11%'; // Set to 11% on specific pages
                 }
             }
         });
@@ -340,6 +342,14 @@ function desktopFixedHeaderFunction() {
         }
     });
 }
+
+// Ensure the code runs only when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    if (isDesktop()) {
+        desktopFixedHeaderFunction();
+    }
+});
+
 
 // Function to handle theme color meta change for mobile
 function mobileThemeColorMetaFunction() {
