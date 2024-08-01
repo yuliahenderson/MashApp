@@ -862,6 +862,7 @@ body {
     display: flex;
     margin-bottom: 2%;
     background-color: #F4F4F4;
+    padding: 2% 0;
   }
 
   .q-4 {
