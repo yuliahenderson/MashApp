@@ -926,6 +926,17 @@ body {
     padding: 0.5%; /* Adjust the value as needed */
 }
 
+        /* Remove the default blue color and underline */
+        a {
+            color: inherit; /* Inherit the color from the parent element */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Optionally, add your own styles */
+        a:hover {
+            text-decoration: underline; /* Add underline on hover, for example */
+        }
+
 }
 
 
