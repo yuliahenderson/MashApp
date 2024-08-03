@@ -1,0 +1,38 @@
+@font-face {
+        font-family: 'Helvetica, Arial', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        src: local('Helvetica'), url('Helvetica.ttf') format('ttf');
+    }
+
+    @font-face {
+       font-family: 'GT America';
+       src: url('Fonts/GT-America-Extended-Bold.woff2') format('woff2'),
+       url('Fonts/GT-America-Extended-Bold.woff') format('woff'),
+       url('Fonts/GT-America-Extended-Bold.ttf') format('truetype');
+    }
+
+    body {
+        font-family: 'Helvetica';
+        line-height: 1.6;
+        padding: 1.25rem; /* 20px */
+        margin: 2% 15%;
+    }
+    h1 {
+        font-family: 'GT America';
+        text-align: center;
+        font-size: 1.5rem; /* 24px */
+        margin-bottom: 1.875rem; /* 30px */
+    }
+    h2 {
+        font-family: 'GT America';
+        font-size: 1.25rem; /* 20px */
+        margin-top: 1.875rem; /* 30px */
+        margin-bottom: 1.25rem; /* 20px */
+    }
+    p, ul {
+        margin: 0.625rem 0; /* 10px */
+    }
+    ul {
+        padding-left: 1.25rem; /* 20px */
+    }
