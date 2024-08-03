@@ -922,9 +922,9 @@ body {
     justify-content: center;
   }
 
-  .social {
-    padding: 1%;
-  }
+.footer_social a {
+    padding: 0.5%; /* Adjust the value as needed */
+}
 
 }
 
@@ -1793,13 +1793,13 @@ body {
 
   .footer_social {
     display: flex;
-    margin: 5%;
+    margin: 4%;
     justify-content: center;
   }
 
-  .social {
-    padding: 5%;
-  }
+.footer_social .social {
+    margin: 2%; /* Adjust the value as needed */
+}
 
   /*.padded-image {
     padding-top: 1.5%;
