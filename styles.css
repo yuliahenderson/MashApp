@@ -914,7 +914,6 @@ body {
     content: '−'; /* Change to "−" when active */
   }
 
-  footer { }
 
   .footer_social {
     display: flex;
@@ -1812,9 +1811,26 @@ body {
     margin: 2%; /* Adjust the value as needed */
 }
 
-  /*.padded-image {
-    padding-top: 1.5%;
-  }*/
+  .footer_social {
+    display: flex;
+    margin: 2%;
+    justify-content: center;
+  }
+
+.footer_social a {
+    padding: 0.5%; /* Adjust the value as needed */
+}
+
+        /* Remove the default blue color and underline */
+        a {
+            color: inherit; /* Inherit the color from the parent element */
+            text-decoration: none; /* Remove underline */
+        }
+
+        /* Optionally, add your own styles */
+        a:hover {
+            text-decoration: underline; /* Add underline on hover, for example */
+        }
 
 }
 
