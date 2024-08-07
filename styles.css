@@ -36,6 +36,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
   width: 100%;
+  font-size: 16px;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   text-align: center;
@@ -1536,22 +1537,28 @@ body {
     background-color: #F4F4F4;
   }
 
-  .page9-main {
+.page9-main {
     margin-top: 5%;
     margin-bottom: 5%;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-  /* Styles for the Wave frame */
-  .wave-frame {
-    width: 24.375rem; /* 390px */
-    height: 18.5rem; /*296px*/
-/*    margin-left: 10%;*/
+/* Styles for the Wave frame */
+.wave-frame {
+    width: 100%;
+    max-width: 24.375rem; /* 390px */
+    height: auto;
+    aspect-ratio: 390 / 296; /* Preserve aspect ratio */
     position: relative;
     overflow: hidden;
     z-index: 1;
-  }
+}
 
-  .wave-frame::before {
+.wave-frame::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1560,19 +1567,21 @@ body {
     height: 100%;
     overflow: hidden;
     z-index: 1;
-  }
+}
 
-  /* Styles for the container holding the slider */
-  .container-frame {
-    position: relative;
+/* Styles for the container holding the slider */
+.container-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     overflow: hidden;
     z-index: 0;
-  }
+}
 
-  /* Styles for the slider */
-  .slider-wave {
+/* Styles for the slider */
+.slider-wave {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1580,22 +1589,48 @@ body {
     overflow: hidden;
     flex-direction: column;
     transition: transform 0.5s ease;
-  }
+}
 
-  /* Styles for individual slides */
-  .slide_page9 {
+/* Styles for individual slides */
+.slide_page9 {
     width: 100%;
     height: 100%;
     flex-shrink: 0;
     box-sizing: border-box;
-  }
+}
 
-  /* Styles for images within slides */
-  .slide_page9 img {
+/* Styles for images within slides */
+.slide_page9 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .wave-frame {
+        max-width: 90%;
+        height: auto;
+        aspect-ratio: 390 / 296;
+    }
+}
+
+@media (max-width: 768px) {
+    .wave-frame {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 390 / 296;
+    }
+}
+
+@media (max-width: 576px) {
+    .wave-frame {
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 390 / 296;
+    }
+}
+
 
   .page9-text {
     text-align: justify;
