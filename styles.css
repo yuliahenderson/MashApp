@@ -703,7 +703,7 @@ body {
 /* Media queries for responsiveness */
 @media (max-width: 992px) {
     .wave-frame {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
         aspect-ratio: 390 / 296;
     }
@@ -711,7 +711,7 @@ body {
 
 @media (max-width: 768px) {
     .wave-frame {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
         aspect-ratio: 390 / 296;
     }
@@ -719,7 +719,7 @@ body {
 
 @media (max-width: 576px) {
     .wave-frame {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
         aspect-ratio: 390 / 296;
     }
@@ -963,133 +963,7 @@ body {
 
 }
 
-@media (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) {
-  /* Styles for iPad portrait */
 
-  .desktop-only {
-    display: none;
-  }
-
-  .mobile-only {
-    display: block;
-  }
-
-
-  #m-logo {
-    position: absolute;
-    left: 7%;
-    margin-top: 6%;
-  }
-
-  #logo {
-    position: absolute;
-    left: 45%;
-    margin-top: 6%;
-  }
-
-  #scrollButton {
-    margin-top: 6%;
-    left: 83%;
-  }
-
-  .one {
-    overflow: hidden;
-  }
-
-  .two {
-    width: 100%;
-    position: absolute;
-    bottom: 10%;
-  }
-
-  .heading1 {
-    font-size: 2.5rem;
-  }
-
-    /* Style for the navigation links */
-  nav {
-    left: 42%; /* Adjust left position as needed */
-    margin-top: 6%; /* Adjust top margin as needed */
-  }
-
-  nav ul {
-    font-size: 2rem; /* 11px */
-    line-height: 1.5rem; /* 24px */
-    letter-spacing: 0.125rem; /* 2px */
-  }
-
-  .heading2 {
-        color: #000000;
-        font-size: 2rem;
-        font-family: GT America;
-        font-weight: 700;
-        line-height: 1.6875rem;
-        letter-spacing: -0.015625rem;
-        align-content: center;
-        padding: 5%;
-    }
-
-  p1.mobile, p3.mobile {
-        display: block;
-        font-size: 1.5rem;
-        font-family: Helvetica;
-        font-weight: 400;
-        line-height: 2rem;
-        padding: 0 8% 5% 8%;
-        text-align: left;
-        word-spacing: 0.00625rem;
-        letter-spacing: -0.01875rem;
-        hyphens: auto;
-    }
-
-  .page3-title {
-        position: absolute;
-        line-height: 2.5rem;
-        letter-spacing: -0.015625rem;
-        font-size: 2rem;
-        font-family: GT America;
-        font-weight: 700;
-        padding: 0.625rem;
-        text-align: left;
-        left: 5%;
-    }
-
-    .heading4 {
-        line-height: 2.5rem;
-        letter-spacing: -0.015625rem;
-        font-size: 2rem;
-        font-family: GT America;
-        color: #000000;
-        font-weight: 700;
-        padding: 0.625rem;
-        text-align: left;
-        margin-left: 5%;
-    }
-
-    .page4-main {
-        width: 80%;
-        margin: 5% 10% 10% 10%;
-
-  .slider-page4 {
-    height: 100vh; /* Adjust the height for 11-inch iPad Pro portrait */
-  }
-
-  p1, p2 {
-
-    font-size: 1.5rem;
-  }
-
-    .page7-container {
-        width: 100%;
-        height: 100vh;
-  }
-
-  .img1-page7 { animation-delay: 0s; width:100% }
-  .img2-page7 { animation-delay: 4s; width:100% }
-  .img3-page7 { animation-delay: 8s; width:100% }
-  .img4-page7 { animation-delay: 12s; width:100% }
-
-}
 
 @media (min-width: 993px) {
 
