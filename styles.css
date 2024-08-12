@@ -894,6 +894,10 @@ body {
     padding: 3% 5% 5% 5%;
   }
 
+  .blog-link {
+    text-decoration: underline;
+}
+
   .collapsible {
     cursor: pointer;
     position: relative;
@@ -1804,6 +1808,9 @@ body {
     padding: 1% 0;
   }
 
+  .blog-link {
+    text-decoration: underline;
+}
   .collapsible {
     cursor: pointer;
     position: relative;
