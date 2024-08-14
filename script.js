@@ -1,10 +1,10 @@
 // Utility functions
 function isDesktop() {
-    return window.innerWidth >= 1181;
+    return window.innerWidth >= 1025;
 }
 
 function isMobile() {
-    return window.innerWidth <= 1180;
+    return window.innerWidth <= 1024;
 }
 
 // Mobile-specific slider function with debug logs
