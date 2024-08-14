@@ -1,10 +1,10 @@
 // Utility functions
 function isDesktop() {
-    return window.matchMedia("(min-width: 993px)").matches;
+    return window.innerWidth >= 1181;
 }
 
 function isMobile() {
-    return window.matchMedia("(max-width: 992px)").matches;
+    return window.innerWidth <= 1180;
 }
 
 // Mobile-specific slider function with debug logs
@@ -350,7 +350,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-
 // Function to handle theme color meta change for mobile
 function mobileThemeColorMetaFunction() {
     const themeColorMeta = document.getElementById('theme-color-meta');
@@ -374,14 +373,13 @@ function mobileThemeColorMetaFunction() {
         const scrolledTo25PercentOfPage3 = isScrolledToThreshold('page3', 0.25);
         const scrolledTo95PercentOfPage8 = isScrolledToThreshold('page8', 0.95);
         const scrolledTo95PercentOfPage9 = isScrolledToThreshold('page9', 0.95);
-        const scrolledTo95PercentOfPage10 = isScrolledToThreshold('page10', 0.95);
         const scrolledTo25PercentOfPage11 = isScrolledToThreshold('page11', 0.25);
 
         if (scrolledTo95PercentOfPage2 && !scrolledTo25PercentOfPage3) {
             themeColorMeta.setAttribute('content', '#38FF27');
         } else if (scrolledTo95PercentOfPage8 && !scrolledTo95PercentOfPage9) {
             themeColorMeta.setAttribute('content', '#f4f4f4');
-        } else if (scrolledTo95PercentOfPage10 && !scrolledTo25PercentOfPage11) {
+        } else if (scrolledTo95PercentOfPage9 && !scrolledTo25PercentOfPage11) {
             themeColorMeta.setAttribute('content', '#00C9FF');
         } else {
             themeColorMeta.setAttribute('content', '#ffffff');
@@ -473,10 +471,10 @@ function mobileFixedHeaderBlueFunction() {
     }
 
     function handleScroll() {
-        const scrolledTo95PercentOfPage10 = isScrolledToThreshold('page10', 0.95);
+        const scrolledTo95PercentOfPage9 = isScrolledToThreshold('page9', 0.95);
         const scrolledTo25PercentOfPage11 = isScrolledToThreshold('page11', 0.25);
 
-        if (scrolledTo95PercentOfPage10 && !scrolledTo25PercentOfPage11) {
+        if (scrolledTo95PercentOfPage9 && !scrolledTo25PercentOfPage11) {
             header.style.backgroundColor = '#00C9FF';
         }
     }
@@ -511,10 +509,6 @@ function initializeDesktopFunctions() {
     desktopFixedHeaderFunction();
     createSlider('.desktop-only .slider-page4 .slide-container');
     desktopSliderPage9Function();
-    // initializeSlider('.desktop-only .slide4');
-    // initializeSlider('.desktop-only .slide7');
-    // initializeSlider('.desktop-only .slide7-2', 10000);
-    // initializeSlider('.desktop-only .slide7-3');
 }
 
 // Function to initialize all mobile-specific functionalities
@@ -528,7 +522,6 @@ function initializeMobileFunctions() {
     mobileFixedHeaderBlueFunction();
     createSlider('.mobile-only .slider-page4 .slide-container');
     mobileSliderPage9Function();
-    // initializeSlider('.mobile-only .slide4-mobile');
 }
 
 // Ensure the code runs only when the DOM is fully loaded
@@ -540,4 +533,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     initializeCollapsibles();
 });
-
