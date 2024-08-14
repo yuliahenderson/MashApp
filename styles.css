@@ -62,6 +62,11 @@ body {
     height: 8%;
     position: fixed;
     z-index: 1000;
+
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+    padding-bottom: 4%;
   }
 
   h1 {
@@ -231,13 +236,12 @@ body {
   #m-logo {
     position: absolute;
     left: 7%;
-    margin-top: 5%;
   }
 
   #logo {
     position: absolute;
     left: 40%;
-    margin-top: 7%;
+    margin-top: 1%;
   }
 
   /* Style for the navigation links */
@@ -245,7 +249,6 @@ body {
     display: none;
     position: absolute;
     left: 32%; /* Adjust left position as needed */
-    margin-top: 5%; /* Adjust top margin as needed */
   }
 
   nav ul {
@@ -291,7 +294,6 @@ body {
     height: 1.5rem; /* 24px */
     border-radius: 0.78125rem; /* 12.5px */
     position: absolute;
-    margin-top: 5%;
     left: 75%;
   }
 
