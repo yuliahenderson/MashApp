@@ -486,6 +486,10 @@ body {
     margin-left: 5%;
   }
 
+  .heading4 span {
+    display: block; /* Forces each span to start on a new line */
+}
+
   .page4-main {
     width: 78%;
     margin: 4% 11% 8% 11%;
@@ -989,6 +993,11 @@ body {
 .slider-page4 {
 
         height: 100vh;
+}
+
+
+  .heading4 span {
+    display: inline; /* Forces each span to display on the same line */
 }
 
 
