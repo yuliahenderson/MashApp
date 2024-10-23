@@ -1048,6 +1048,7 @@ body {
     position: absolute;
     right: 5%; /* Adjust right position as needed */
     margin-top: 3%; /* Adjust top margin as needed */
+    margin-right: 1%; /* Adjust right margin as needed */
   }
 
   nav ul {
