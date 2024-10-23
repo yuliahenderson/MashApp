@@ -979,8 +979,8 @@ body {
 }
 
 
-@media (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: portrait) {
-  /* Styles for iPad portrait */
+/*@media (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: portrait) {
+
 
     nav {
         left: 42%;
@@ -1001,11 +1001,11 @@ body {
 
 
   .heading4 span {
-    display: inline; /* Forces each span to display on the same line */
+    display: inline;
 }
 
 
-}
+}*/
 
 
 
