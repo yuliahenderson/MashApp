@@ -1479,7 +1479,7 @@ body {
 
   .page4-main {
     width: 22%;
-    margin: 4%;
+    margin-left: 4%;
   }
 
   .page4-text {
@@ -1542,7 +1542,6 @@ body {
 
   .page5-main {
     margin-left: 20%;
-    margin-top: 7%;
     width: 22%;
   }
 
@@ -1568,7 +1567,7 @@ body {
   }
 
   .coverflow__carousel {
-    margin: 5%;
+    margin: 8%;
     display: flex;
     justify-content: center;
     align-items: center;
