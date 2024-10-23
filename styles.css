@@ -1068,7 +1068,7 @@ body {
 
   nav ul li:last-child {
     margin-right: 0;
-    margin-right: 1rem; /* 20px */
+    margin-right: 1.25rem; /* 20px */
   }
 
   nav ul li a {
@@ -1123,7 +1123,7 @@ body {
     align-items: center;
     border-radius: 0.78125rem; /* 12.5px */
     position: absolute;
-    right: 3%;
+    right: 4%;
     margin-top: 3%;
   }
 
@@ -1605,21 +1605,22 @@ body {
 
   .page9 { }
 
-  .page9-main {
+ /* .page9-main {
     width: 60%;
-  }
+  }*/
 
   /* Styles for the Wave frame */
-  .wave-frame {
+  .page9-main {
     width: 43.75rem; /* 700px */
     height: 33.1875rem; /* 531px */
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     position: relative;
     overflow: hidden;
     z-index: 1;
   }
 
-  .wave-frame::before {
+  .page9-main::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1667,6 +1668,7 @@ body {
 
   .page9-text {
     width: 30%;
+    margin-right: 5%;
     text-align: left;
   }
 
