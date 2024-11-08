@@ -84,19 +84,19 @@ body {
     padding: 5%;
   }
 
-  p {
-    font-size: 1rem; /* 16px */
-    width: 30rem; /* 480px */
+/*  p {
+    font-size: 1rem;
+    width: 30rem;
     margin: 2em auto;
     font-family: Helvetica;
-    letter-spacing: -0.01875rem; /* -0.3px */
+    letter-spacing: -0.01875rem;
     font-weight: 400;
-    line-height: 1.25rem; /* 20px */
-    word-spacing: 0.00625rem; /* 0.1em */
+    line-height: 1.25rem;
+    word-spacing: 0.00625rem;
     text-align: left;
-  }
+  }*/
 
-  p1, p2 {
+  p.style-p1, p.style-p2 {
     font-size: 1rem; /* 16px */
     font-family: Helvetica;
     font-weight: 400;
@@ -108,7 +108,7 @@ body {
     hyphens: auto;
   }
 
-  p1.mobile {
+  p.style-p1.mobile {
     display: block;
     font-size: 1rem; /* 16px */
     font-family: Helvetica;
@@ -121,7 +121,7 @@ body {
     hyphens: auto;
   }
 
-  p3.mobile {
+  p.style-p3.mobile {
     display: block;
     font-size: 1rem; /* 16px */
     font-family: Helvetica;
@@ -135,6 +135,7 @@ body {
   }
 
   h1.faq {
+    float: left;
     font-size: 0.875rem; /* 14px */
     font-family: Helvetica;
     font-weight: 700;
@@ -156,7 +157,7 @@ body {
     text-align: center;
   }
 
-  p4 {
+  p.style-p4 {
     font-size: 1.5rem; /* 24px */
     font-family: Helvetica;
     font-weight: 700;
@@ -167,7 +168,7 @@ body {
     hyphens: auto;
   }
 
-  p5 {
+  p.style-p5 {
     font-size: 0.875rem; /* 14px */
     font-family: Helvetica;
     font-weight: 400;
@@ -178,12 +179,11 @@ body {
     hyphens: auto;
   }
 
-  p6 {
+  p.style-p6 {
     font-size: 0.75rem; /* 12px */
     font-family: Helvetica;
     font-weight: 400;
     line-height: 1.25rem; /* 20px */
-    text-align: left;
     word-spacing: 0.00625rem; /* 0.1em */
     letter-spacing: -0.01875rem; /* -0.3px */
     hyphens: auto;
@@ -1149,19 +1149,19 @@ body {
     padding: 5%;
   }
 
-  p {
-    font-size: 1rem; /* 16px */
-    width: 30rem; /* 480px */
+/*  p {
+    font-size: 1rem;
+    width: 30rem;
     margin: 2em auto;
     font-family: Helvetica;
-    letter-spacing: -0.01875rem; /* -0.3px */
+    letter-spacing: -0.01875rem;
     font-weight: 400;
-    line-height: 1.25rem; /* 20px */
+    line-height: 1.25rem;
     word-spacing: 0.1em;
     text-align: left;
   }
-
-  p1, p2 {
+*/
+  p.style-p1, p.style-p2 {
     font-size: 1rem; /* 16px */
     font-family: Helvetica;
     font-weight: 400;
@@ -1173,6 +1173,7 @@ body {
   }
 
   h1.faq {
+    float: left;
     font-size: 0.875rem; /* 14px */
     font-family: Helvetica;
     font-weight: 700;
@@ -1195,18 +1196,18 @@ body {
     text-align: center;
   }
 
-  p4 {
+  p.style-p4 {
     font-size: 1.5rem; /* 24px */
     font-family: Helvetica;
     font-weight: 700;
     line-height: 0.75rem; /* 12px */
-    text-align: right;
+/*    text-align: right;*/
     word-spacing: 0.1em;
     letter-spacing: -0.01875rem; /* -0.3px */
     hyphens: auto;
   }
 
-  p5 {
+  p.style-p5 {
     font-size: 0.875rem; /* 14px */
     font-family: Helvetica;
     font-weight: 400;
@@ -1217,12 +1218,11 @@ body {
     hyphens: auto;
   }
 
-  p6 {
+  p.style-p6 {
     font-size: 0.75rem; /* 12px */
     font-family: Helvetica;
     font-weight: 400;
     line-height: 1.25rem; /* 20px */
-    text-align: left;
     word-spacing: 0.1em;
     letter-spacing: -0.01875rem; /* -0.3px */
     hyphens: auto;
@@ -1892,7 +1892,7 @@ body {
 
   .footer_social {
     display: flex;
-    margin: 2%;
+    margin: 1%;
     justify-content: center;
   }
 
